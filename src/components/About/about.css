@@ -1,0 +1,77 @@
+.aboutus_name {
+    color: rgb(64, 186, 64);
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+}
+
+.we_pro_para {
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 500;
+    font-family: var(--title-fonts);
+    margin: 0 0 5px;
+}
+
+.image-text-container {
+    display: flex;
+    align-items: center;
+    /* vertically center */
+    gap: 20px;
+    /* spacing between image and text */
+}
+
+.image-text-container img {
+    max-width: 50%;
+    /* adjust as needed */
+    height: auto;
+}
+
+.image-text-container p {
+    flex: 1;
+    /* take remaining space */
+    font-size: 16px;
+    line-height: 1.4;
+    justify-content: justify;
+}
+
+.image-text-container p {
+    text-align: justify;
+}
+
+.card {
+    border-bottom: 3px solid rgb(64, 186, 64);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+    
+}
+
+.rounded-circle-frame {
+  border: 3px solid #f0f0f0;  /* Card visible border */
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.rounded-circle-frame:hover {
+  background: #7ec2f8; /* The highlight color on hover */
+}
+
+.inside-circle {
+  background: #fff;
+}
+
+
+.overlap-circle:hover .hover-bg {
+  background: #a2dafb !important; /* or another highlight color */
+  transition: background 0.2s;
+}
+
+

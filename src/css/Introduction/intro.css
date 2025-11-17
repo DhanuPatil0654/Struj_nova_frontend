@@ -1,0 +1,82 @@
+.intro_name {
+    color: #0a5c33;
+    /* font-family: "Outfit", sans-serif; */
+    font-family: 'Bagothic', sans-serif !important;
+    font-size: 26px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    margin: 0 auto;
+    font-weight: 600 !important;
+
+}
+
+.intro_name:hover{
+    color: rgb(207, 114, 21);
+}
+
+.about_company_intro{
+    font-family: "Outfit", sans-serif !important;
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    margin: 0 auto;
+}
+.card-about {
+  position: relative;
+  border: none;
+  padding-right: 10px;   /* optional spacing */
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30p;
+}
+
+/* Create the animated right border */
+.card-about::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 0;
+  background-color: #13b263;
+  transition: height 0.4s ease-in-out;
+}
+
+/* On hover → grow border from top to bottom */
+.card-about:hover::after {
+  height: 100%;
+}
+
+.custome_btn_read_more {
+  border-radius: 20px;   /* rounded both left and right sides */
+  padding: 10px 20px;
+  background-color: #13b263; /* example green color */
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* space between text and arrow */
+}
+
+/* Style the arrow */
+.custome_btn_read_more .arrow {
+  font-weight: bold;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* Optional: animate arrow on hover */
+.custome_btn_read_more:hover .arrow {
+  transform: translateX(5px);
+}
+
+.custome_btn_read_more {
+  outline: none;           /* Remove outline on focus */
+  box-shadow: none;        /* Remove any focus shadow */
+}
+
+.custome_btn_read_more:focus {
+  outline: none;           /* Remove outline on keyboard focus */
+  box-shadow: none;        /* Remove shadow on focus */
+}

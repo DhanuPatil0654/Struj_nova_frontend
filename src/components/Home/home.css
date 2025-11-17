@@ -1,0 +1,194 @@
+/* Transparent black background with centered text */
+.background_color {
+  background: rgba(0, 0, 0, 0.7);
+  /* Transparent black */
+  color: white;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+
+}
+
+/* Green heading */
+.head_text {
+  color: #00ff7f;
+  font-family: 'Orbitron', sans-serif !important;
+
+  font-size: 36px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  margin: 0 auto;
+  font-weight: 600 !important;
+
+}
+
+/* Responsive paragraph */
+.background_color p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .head_text {
+    font-size: 2.2rem;
+  }
+
+  .background_color p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .head_text {
+    font-size: 1.8rem;
+  }
+
+  .background_color p {
+    font-size: 0.9rem;
+  }
+}
+
+.outspeak {
+  color: #236142;
+}
+
+.customers-wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.section-title {
+
+
+  font-family: "Outfit", sans-serif;
+  font-size: 36px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  margin: 0 auto;
+  font-weight: 600 !important;
+  margin-bottom: 20px;
+}
+
+.slider-card {
+  background: #f9f9f9;
+  /* or a background image with `background-image` */
+  padding: 40px 20px 20px 20px;
+  /* extra top padding for image overlap */
+
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  padding: 30px 20px;
+  border-right: 4px solid rgb(64, 186, 64);
+}
+
+.feedback-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  min-height: 220px;
+}
+
+.feedback-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: unset;
+}
+
+.feedback-quote {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+  color: #307d57;
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  margin: 0 auto;
+  font-weight: 600 !important;
+}
+
+.stars {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.star {
+  color: #f5c518;
+  font-size: 1.3rem;
+  margin: 0 2px;
+}
+
+@media (max-width: 768px) {
+  .slider-card {
+    padding: 20px 10px;
+    min-height: 220px;
+  }
+
+  .section-title {
+
+    font-family: "Outfit", sans-serif;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    margin: 0 auto;
+    font-weight: 500 !important;
+    margin-bottom: 30px;
+  }
+
+  .feedback-slide {
+    min-height: 180px;
+  }
+
+  .feedback-text {
+    font-size: 0.95rem;
+    -webkit-line-clamp: 4;
+    /* Show 4 lines max */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+}
+
+
+.rounded-small {
+  width: 50px;
+  /* small fixed width */
+  height: 50px;
+  /* small fixed height */
+  border-radius: 50%;
+  /* makes the image round */
+  object-fit: cover;
+  /* keep aspect ratio and cover the box */
+  display: inline-block;
+  background-color: #4b4646;
+  padding: 5px;
+}
+
+@media (max-width: 480px) {
+  .feedback-quote {
+    font-size: 16px !important;
+    /* smaller size for mobile */
+    line-height: 1.4;
+  }
+}
+
+/* Tablet View (optional) */
+@media (max-width: 768px) {
+  .feedback-quote {
+    font-size: 20px;
+  }
+}

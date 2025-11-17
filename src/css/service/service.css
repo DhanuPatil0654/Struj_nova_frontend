@@ -1,0 +1,90 @@
+.service_back_color{
+    background-color: #f8f8f8 !important;
+}
+
+.custom-our-services {
+    font-size: 18px !important;
+    font-family: "Outfit", sans-serif;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    margin: 0 auto;
+    font-weight: 00 !important;
+    text-align: center;
+}
+
+.service_title {
+    font-size: 34px;
+    font-family: "Outfit", sans-serif !important;
+    line-height: 100% !important;
+    letter-spacing: 0.01em;
+    margin: 0 auto;
+    font-weight: 700 !important;
+    text-align: center;
+}
+@media (max-width: 600px) {
+  .service_title {
+    font-size: 22px; /* smaller font size for mobile */
+  }
+}
+
+.custom_service_card{
+    border: 0px !important;
+}
+.custom-icon {
+  font-size: 48px !important; /* increase icon size */
+  color: #13b263;  /* optional: your preferred color */
+}
+
+.custom-title1 {
+  font-size: 20px; /* increase title font size */
+  font-weight: 500 !important;
+  margin-top: 10px; /* spacing between icon and title */
+  color:black;   /* optional: your preferred color */
+ font-family: "Outfit", sans-serif !important;
+  
+}
+.service-card-para{
+font-size: 18px; /* increase title font size */
+  font-weight: 00 !important;
+  margin-top: 10px; /* spacing between icon and title */
+  color:rgb(171, 166, 166);   /* optional: your preferred color */
+ font-family: "Outfit", sans-serif !important;
+}
+
+@media (max-width: 600px) {
+  .custom-icon{
+    text-align: center !important;
+  }
+}
+
+.learn-more-btn {
+  background-color: #13b263; /* green background */
+  color: white;              /* white text */
+  border: none;
+  border-radius: 20px;       /* rounded left and right */
+  padding: 8px 20px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid #13b263;
+}
+
+.learn-more-btn .arrow {
+  color: white;             /* white arrow */
+  opacity: 1;               /* visible by default */
+  transition: color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: white;   /* background turns white */
+  color: black;              /* text turns black */
+  border-color: black;
+}
+
+.learn-more-btn:hover .arrow {
+  color: black;              /* arrow turns black on hover */
+}

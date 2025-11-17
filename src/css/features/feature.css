@@ -1,0 +1,160 @@
+.features_back_color {
+  background-color: #f7f9fa !important;
+}
+
+.out_feature_name {
+  text-align: center;
+  color: #0a5c33;
+  font-family: 'Orbitron', sans-serif !important;
+  /* font-family: "Outfit", sans-serif !important; */
+  font-size: 36px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  margin: 0 auto;
+  font-weight: 700 !important;
+}
+
+@media (max-width: 600px) {
+  .out_feature_name {
+    font-size: 20px;
+    /* smaller font size for mobile */
+  }
+}
+
+
+.feature-slide {
+  display: flex;
+  flex-direction: column;
+  /* stack icon and text vertically */
+  align-items: center;
+  /* center horizontally */
+  justify-content: center;
+  /* center vertically if height set */
+  font-size: 20px;
+  color: black;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  /* center text inside paragraph */
+  gap: 10px;
+  /* spacing between icon and text */
+}
+
+.custom_icon {
+  font-size: 24px;
+  color: black !important;
+}
+
+.icons_ctosum {
+  font-size: 60px !important;
+}
+
+.icons_ctosum:hover {
+  color: rgb(207, 103, 33);
+}
+
+.feature-slide p {
+  white-space: normal;
+  /* allow wrapping */
+  overflow: visible;
+  /* show full text */
+  text-overflow: clip;
+  /* no ellipsis */
+}
+
+
+@media (max-width: 600px) {
+  .feature-slide {
+    font-size: 14px;
+    /* smaller font size on mobile */
+    padding: 10px;
+  }
+
+  .custom_icon {
+    font-size: 18px !important;
+    /* smaller icon size on mobile */
+  }
+
+  .icons_ctosum {
+    font-size: 30px !important;
+  }
+
+  .feature-slide p {
+    display: -webkit-box;
+    /* Use flexbox like container */
+    -webkit-line-clamp: 3;
+    /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+    /* Vertical orientation */
+    overflow: hidden;
+    /* Hide overflow */
+    text-overflow: ellipsis;
+    /* Show ellipsis */
+    white-space: normal;
+    /* Allow wrapping */
+    font-size: 16px;
+    /* Adjust font size */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.custome-button-feature1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* space between icon and text */
+  background-color: #13b263;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+
+/* Remove blue border on focus (click or keyboard) */
+.custome-button-feature1:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Optional: change background color on click */
+.custome-button-feature1:active {
+  background-color: #0a5c33;
+  /* Darker shade or any */
+  color: black;
+
+}
+
+.feature1_card {
+
+  border-bottom: 2px solid #13b263 !important;
+}
+
+
+.custome-button-feature1:hover {
+  background-color: #13b263;
+  color: white;
+  /* Keep text white or adjust as needed */
+}
+
+.custom_icon {
+  font-size: 26px;
+}
