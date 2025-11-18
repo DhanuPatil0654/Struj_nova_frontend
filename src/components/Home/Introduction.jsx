@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../css/Introduction/intro.css'
-import company_overview_img from '../../../public/Home/scrroter.png'
+import company_overview_img from '../../assets/Home/scrroter.png'
 function Introduction() {
     return (
         <>

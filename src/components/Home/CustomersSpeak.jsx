@@ -4,7 +4,7 @@ import './home.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaStar } from 'react-icons/fa';
-import logoimg from '../../../public/logo/StrujNova_LOGO.png'
+import logoimg from '../../assets/logo/StrujNova_LOGO.png'
 function CustomersSpeak() {
     const feedbacks = [
         {

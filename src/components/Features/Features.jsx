@@ -7,6 +7,12 @@ import { MdElectricBolt } from "react-icons/md";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { PiPlugChargingFill } from "react-icons/pi";
+import { SiConsul } from "react-icons/si";
+import { IoTelescopeOutline } from "react-icons/io5";
+import { MdPrecisionManufacturing } from "react-icons/md";
+import { FaHandshake } from "react-icons/fa";
+import { GrPersonalComputer } from "react-icons/gr";
 
 
 function Features() {
@@ -16,6 +22,10 @@ function Features() {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        autoplay: true,        // 🔥 Auto slide enabled
+        autoplaySpeed: 2000,   // 🔥 Slide every 2 seconds
+
+
         responsive: [
             { breakpoint: 1024, settings: { slidesToShow: 2 } },
             { breakpoint: 600, settings: { slidesToShow: 1 } }
@@ -24,19 +34,43 @@ function Features() {
 
     const featuresData = [
         {
-            title: "EV Charging Solutions (End-to-End) Complete hardware + software + operations ecosystem",
+            title: "Complete In-House Charger Development",
             icon: <LuBatteryCharging />
         },
         {
-            title: "Charge Point Operator (CPO) Services Making charging accessible, affordable & reliable",
+            title: "Smart & Scalable Charging Infrastructure",
             icon: <RiGlobalFill />
         },
         {
-            title: "Power Electronics & Hardware Manufacturing",
+            title: "Intelligent Charging Management System (CMS)",
             icon: <IoHammer />
         },
         {
-            title: "Electrical Contracting & Energy Infrastructure",
+            title: "Seamless User Experience",
+            icon: <MdElectricBolt />
+        },
+        {
+            title: "Zero-Obstacle Charging (Anyone Can Charge Easily)",
+            icon: <PiPlugChargingFill />
+        },
+        {
+            title: "Engineering, Consulting & Turnkey EPC Solutions",
+            icon: <SiConsul />
+        },
+        {
+            title: "Advanced IoT & Software Development",
+            icon: <IoTelescopeOutline />
+        },
+        {
+            title: "High-Quality Manufacturing Standards",
+            icon: <MdPrecisionManufacturing />
+        },
+        {
+            title: "Investment & Partnership Opportunities",
+            icon: <FaHandshake />
+        },
+        {
+            title: "Future-Ready Innovations",
             icon: <MdElectricBolt />
         }
     ];

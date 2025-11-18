@@ -1,7 +1,7 @@
 import React from 'react'
-import aboutimg from '../../../public/about/about_page.jpg'
-import chargerimg from '../../../public/about/chargerimg.png'
-import chargermonry from '../../../public/about/chargermoney.png'
+import aboutimg from '../../assets/about/about_page.jpg'
+import chargerimg from '../../assets/about/chargerimg.png'
+import chargermonry from '../../assets/about/chargermoney.png'
 import './about.css'
 function Aboutpage() {
   return (

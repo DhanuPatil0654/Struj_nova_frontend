@@ -3,7 +3,7 @@ import './Navbar.css';
 import { FaFacebookF, FaYoutube, FaLinkedinIn } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { FiSearch, FiShoppingCart, FiMenu, FiX } from 'react-icons/fi';
-import logo from '../../../public/logo/StrujNova_LOGO.png'
+import logo from '../../assets/logo/StrujNova_LOGO.png'
 import { Link } from 'react-router';
 function NavbarHeader() {
     const [cartCount] = useState(0);
@@ -92,7 +92,7 @@ function NavbarHeader() {
             {/* Mobile Sidebar */}
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
                 <div className="sidebar-header">
-                    <img src={logo} width={50} height={50} />Struj Nova
+                    <img src={logo} width={50} height={50} /><p className='head_text1'>STRUJNOVA ENERGY</p>
                     <button className="close-btn" onClick={closeSidebar}>
                         <FiX />
                     </button>

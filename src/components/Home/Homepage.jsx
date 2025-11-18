@@ -1,6 +1,6 @@
 import React from 'react';
 import './home.css';
-import first_img_home from '../../../public/Home/homepage_first.png';
+import first_img_home from '../../assets/Home/homepage_first.png';
 import Aboutpage from '../About/Aboutpage';
 import CustomersSpeak from './CustomersSpeak';
 import Introduction from './Introduction';

@@ -1,69 +1,86 @@
-.service_back_color{
-    background-color: #f8f8f8 !important;
+.service_back_color {
+  background-color: #f8f8f8 !important;
 }
 
 .custom-our-services {
-    font-size: 18px !important;
-    font-family: "Outfit", sans-serif;
-    line-height: 1.5;
-    letter-spacing: 0.01em;
-    margin: 0 auto;
-    font-weight: 00 !important;
-    text-align: center;
+  font-size: 18px !important;
+  font-family: "Outfit", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  margin: 0 auto;
+  font-weight: 00 !important;
+  text-align: center;
 }
 
 .service_title {
-    font-size: 34px;
-    font-family: "Outfit", sans-serif !important;
-    line-height: 100% !important;
-    letter-spacing: 0.01em;
-    margin: 0 auto;
-    font-weight: 700 !important;
-    text-align: center;
+  font-size: 34px;
+  font-family: "Outfit", sans-serif !important;
+  line-height: 100% !important;
+  letter-spacing: 0.01em;
+  margin: 0 auto;
+  font-weight: 700 !important;
+  text-align: center;
 }
+
 @media (max-width: 600px) {
   .service_title {
-    font-size: 22px; /* smaller font size for mobile */
+    font-size: 22px;
+    /* smaller font size for mobile */
   }
 }
 
-.custom_service_card{
-    border: 0px !important;
+.custom_service_card {
+  border: 0px !important;
+  position: relative;
+  overflow: hidden;
 }
+
 .custom-icon {
-  font-size: 48px !important; /* increase icon size */
-  color: #13b263;  /* optional: your preferred color */
+  font-size: 48px !important;
+  /* increase icon size */
+  color: #13b263;
+  /* optional: your preferred color */
 }
 
 .custom-title1 {
-  font-size: 20px; /* increase title font size */
+  font-size: 20px;
+  /* increase title font size */
   font-weight: 500 !important;
-  margin-top: 10px; /* spacing between icon and title */
-  color:black;   /* optional: your preferred color */
- font-family: "Outfit", sans-serif !important;
-  
+  margin-top: 10px;
+  /* spacing between icon and title */
+  color: black;
+  /* optional: your preferred color */
+  font-family: "Outfit", sans-serif !important;
+
 }
-.service-card-para{
-font-size: 18px; /* increase title font size */
+
+.service-card-para {
+  font-size: 18px;
+  /* increase title font size */
   font-weight: 00 !important;
-  margin-top: 10px; /* spacing between icon and title */
-  color:rgb(171, 166, 166);   /* optional: your preferred color */
- font-family: "Outfit", sans-serif !important;
+  margin-top: 10px;
+  /* spacing between icon and title */
+  color: rgb(171, 166, 166);
+  /* optional: your preferred color */
+  font-family: "Outfit", sans-serif !important;
 }
 
 @media (max-width: 600px) {
-  .custom-icon{
+  .custom-icon {
     text-align: center !important;
   }
 }
 
 .learn-more-btn {
-  background-color: #13b263; /* green background */
-  color: white;              /* white text */
+  background-color: #13b263;
+  /* green background */
+  color: white;
+  /* white text */
   border: none;
-  border-radius: 20px;       /* rounded left and right */
+  border-radius: 20px;
+  /* rounded left and right */
   padding: 8px 20px;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 16px;
   cursor: pointer;
   display: inline-flex;
@@ -74,17 +91,140 @@ font-size: 18px; /* increase title font size */
 }
 
 .learn-more-btn .arrow {
-  color: white;             /* white arrow */
-  opacity: 1;               /* visible by default */
+  color: white;
+  /* white arrow */
+  opacity: 1;
+  /* visible by default */
   transition: color 0.3s ease;
 }
 
 .learn-more-btn:hover {
-  background-color: white;   /* background turns white */
-  color: black;              /* text turns black */
+  background-color: white;
+  /* background turns white */
+  color: black;
+  /* text turns black */
   border-color: black;
 }
 
 .learn-more-btn:hover .arrow {
-  color: black;              /* arrow turns black on hover */
+  color: black;
+  /* arrow turns black on hover */
+}
+
+
+/* Make all cards same height */
+.equal-height-card {
+  height: 340px;
+  /* adjust as needed */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make body stretch */
+.equal-height-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Truncate paragraph to 3 lines */
+.truncated-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* maximum 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 65px;
+  /* maintain consistent spacing */
+}
+
+/* Push button to bottom */
+.card-bottom-btn {
+  width: fit-content;
+  /* Make button only as wide as text */
+  padding: 6px 14px;
+  /* Smaller padding */
+  font-size: 14px;
+  /* Reduce font size */
+  margin-top: auto;
+  border-radius: 6px;
+  /* Optional: Make slightly rounded */
+}
+
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  width: 90%;
+  max-width: 480px;
+  padding: 25px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-bottom: 4px solid #13b263;
+}
+
+.popup-animate {
+  animation: popin 0.3s ease-out;
+}
+
+@keyframes popin {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.popup-close {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.popup-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.popup-list li {
+  margin-bottom: 8px;
+  font-size: 17px;
+  color: #000;
+}
+
+.custom_service_card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;                 /* border thickness */
+  width: 0%;
+  background: #13b263;         /* border color (change if needed) */
+  transition: width 0.4s ease-in-out;
+}
+
+/* Animate on hover */
+.custom_service_card:hover::after {
+  width: 100%;
 }

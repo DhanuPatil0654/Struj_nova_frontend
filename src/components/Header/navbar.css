@@ -11,9 +11,12 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  
+
 }
-dl, ol, ul {
+
+dl,
+ol,
+ul {
   margin-top: 13px !important;
 }
 
@@ -332,15 +335,17 @@ dl, ol, ul {
   }
 
   .navbar-container {
-    justify-content: flex-start; /* Aligns content to the left */
-    padding-left: 60px; /* Make space for the toggle button */
+    justify-content: flex-start;
+    /* Aligns content to the left */
+    padding-left: 60px;
+    /* Make space for the toggle button */
   }
 
   .nav-icons .social-icon {
     display: none;
   }
 
- .nav-icons {
+  .nav-icons {
     display: flex;
     position: absolute;
     right: 10px;
@@ -368,4 +373,15 @@ dl, ol, ul {
     height: 16px;
     font-size: 9px;
   }
+}
+
+.head_text1 {
+  color: #0d9450;
+  font-family: 'Orbitron', sans-serif !important;
+
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  margin: 0 auto;
+  font-weight: 500 !important;
 }
