@@ -15,7 +15,7 @@ function Footer() {
                         {/* LEFT – LOGO */}
                         <div class="col-lg-4 col-md-4 col-sm-12 text-center">
                             <img src={logo} class="footer_logo" alt="logo" />
-                            <p class="company-name">STRUJ NOVA ENERGY</p>
+                            <p class="company-name">StrujNova Energy</p>
                         </div>
 
                         {/* MIDDLE – QUICK LINKS */}

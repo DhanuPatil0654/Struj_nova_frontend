@@ -50,7 +50,7 @@ function CustomersSpeak() {
     return (
         <>
 
-            <div className="customers-wrapper">
+            <div className="customers-wrapper" data-aos="fade-up">
                 <h1 className="section-title">Our Customers Speak</h1>
                 <img src={logoimg} className="img-fluid rounded-small" alt="..." />
 

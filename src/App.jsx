@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import NavbarHeader from './components/Header/NavbarHeader'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router'
@@ -7,8 +7,19 @@ import Services from './components/services/Services'
 import Aboutpage from './components/About/Aboutpage'
 import Footer from './components/footer/Footer';
 import Contact_us from './components/contact_us/Contact_us';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
 
 function App() {
+  useEffect(() => {
+  AOS.init({
+    duration: 1000, // animation speed
+    once: true, // run animation only once
+  });
+}, []);
+
   return (
     <>
 

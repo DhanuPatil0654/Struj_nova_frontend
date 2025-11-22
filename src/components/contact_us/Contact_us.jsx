@@ -122,13 +122,13 @@ const Contact_us = () => {
   };
 
   return (
-    <section className="contact-section">
+    <section className="contact-section" data-aos="fade-up">
       <div className="container">
         <div className="contact-wrapper row">
           {/* LEFT FORM */}
           <div className="col-lg-6 col-md-12 mb-5 mb-lg-0">
             <div className="contact-form-box">
-              <h2 className="contact-form-title">GET IN TOUCH</h2>
+              <h2 className="contact-form-title">GET CHARGE WITH US</h2>
               <p className="contact-form-subtitle">
                 Powering Your Goals with Smarter EV Solutions. Let’s Connect & Build
               </p>

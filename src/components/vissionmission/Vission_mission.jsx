@@ -3,7 +3,7 @@ import '../../css/vission_mission/vission_mission.css'
 function Vission_mission() {
     return (
         <>
-            <div className='vission_mission_back'>
+            <div className='vission_mission_back' data-aos="fade-up">
                 <div className='container pt-5 pb-5 '>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12">
@@ -16,6 +16,7 @@ function Vission_mission() {
                                 </div>
                             </div>
                         </div>
+                      
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="card vission_card">
                                 <div class="card-body">

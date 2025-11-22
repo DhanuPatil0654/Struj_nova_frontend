@@ -76,7 +76,7 @@ function Features() {
     ];
     return (
         <>
-            <div className='features_back_color mt-5'>
+            <div className='features_back_color mt-5' data-aos="fade-up">
                 <p className='out_feature_name'>Our Features</p>
                 <div className='container'>
                     <Slider {...settings}>

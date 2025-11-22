@@ -153,7 +153,7 @@ function Aboutpage() {
 
         </div >
       </div > */}
-      <div className='container-fluid'>
+      <div className='container-fluid' data-aos="fade-up">
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12 p-0 m-0">
             <div className="about_para">

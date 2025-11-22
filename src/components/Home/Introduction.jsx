@@ -4,7 +4,7 @@ import company_overview_img from '../../assets/Home/scrroter.png'
 function Introduction() {
     return (
         <>
-            <div className='container mt-3'>
+            <div className='container mt-3' data-aos="fade-up">
                 <div className='start-intro'>
                     <p className='intro_name'>| Company Overview - </p>
                 </div>

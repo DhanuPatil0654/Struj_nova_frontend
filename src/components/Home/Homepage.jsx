@@ -9,7 +9,7 @@ import Features from '../Features/Features';
 function Homepage() {
   return (
     <>
-      <div className='background_color'>
+      <div className='background_color 'data-aos="fade-up" >
         <h1 className='head_text'>STRUJNOVA ENERGY</h1>
         <p>Charging Tomorrow, Today !</p>
         <img src={first_img_home} class="img-fluid" alt="..."></img>

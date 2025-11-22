@@ -107,9 +107,9 @@ function Services() {
 
   return (
     <>
-      <div className='service_back_color'>
+      <div className='service_back_color' data-aos="fade-up">
         <div className='container pt-5 pb-5'>
-          <p className='custom-our-services'>- Our Service</p>
+          <p className='custom-our-services'>- Our Service -</p>
           <p className='service_title mt-3'>Service Providers for Electric Vehicles</p>
 
           <div className='mt-5'>
