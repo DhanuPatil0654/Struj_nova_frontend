@@ -48,23 +48,23 @@ function NavbarHeader() {
                         <li className="nav-item dropdown">
                             <a href="/service" className="nav-link">
                                 SERVICES
-                                {/* SERVICES <span className="dropdown-icon">▼</span> */}
+                               
                             </a>
                         </li>
-                        <li className="nav-item dropdown">
+                        {/* <li className="nav-item dropdown">
                             <a href="#gallery" className="nav-link">
                                 GALLERY
-                                {/* GALLERY <span className="dropdown-icon">▼</span> */}
+                               
                             </a>
                         </li>
                         <li className="nav-item dropdown">
                             <a href="#blog" className="nav-link">
                                 BLOG
-                                {/* BLOG <span className="dropdown-icon">▼</span> */}
+                               
                             </a>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
-                            <a href="#contact" className="nav-link">
+                            <a href="/contact-us" className="nav-link">
                                 CONTACT US
                             </a>
                         </li>
@@ -118,20 +118,20 @@ function NavbarHeader() {
                             {/* SERVICES <span className="dropdown-icon">▼</span> */}
                         </a>
                     </li>
-                    <li className="sidebar-item">
+                    {/* <li className="sidebar-item">
                         <a href="#gallery" className="sidebar-link" onClick={closeSidebar}>
                             GALLERY
-                            {/* GALLERY <span className="dropdown-icon">▼</span> */}
+                            
                         </a>
                     </li>
                     <li className="sidebar-item">
                         <a href="#blog" className="sidebar-link" onClick={closeSidebar}>
                             BLOG
-                            {/* BLOG <span className="dropdown-icon">▼</span> */}
+                           
                         </a>
-                    </li>
+                    </li> */}
                     <li className="sidebar-item">
-                        <a href="#contact" className="sidebar-link" onClick={closeSidebar}>
+                        <a href="/contact-us" className="sidebar-link" onClick={closeSidebar}>
                             CONTACT US
                         </a>
                     </li>

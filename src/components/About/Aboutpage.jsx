@@ -3,10 +3,14 @@ import aboutimg from '../../assets/about/about_page.jpg'
 import chargerimg from '../../assets/about/chargerimg.png'
 import chargermonry from '../../assets/about/chargermoney.png'
 import './about.css'
+import aboutimg1 from '../../assets/about/aboutus_img.jpg'
+import { FaArrowRight } from "react-icons/fa";
+import Vission_mission from '../vissionmission/Vission_mission'
+
 function Aboutpage() {
   return (
     <>
-      <div class="container mt-5">
+      {/* <div class="container mt-5">
         <div class="row">
           <div class="col-lg-6 col-md-12 col-sm-12">
             <p className='aboutus_name'>| About Us - </p>
@@ -19,7 +23,7 @@ function Aboutpage() {
 
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12 ">
-            {/* <img src={aboutimg} class="img-fluid" alt="..."></img> */}
+     
             <div className='row mt-5'>
               <div className='col-lg-6 col-md-12 col-sm-12 mb-5'>
                 <div className="card custom-card position-relative" style={{ paddingLeft: '32px', paddingTop: '24px' }}>
@@ -40,7 +44,7 @@ function Aboutpage() {
                       zIndex: 2
                     }}
                   >
-                    {/* Circular progress bar (SVG) */}
+                 
                     <div className="progress-circle">
                       <svg width="54" height="54">
                         <circle
@@ -101,7 +105,7 @@ function Aboutpage() {
                       zIndex: 2
                     }}
                   >
-                    {/* Circular progress bar (SVG) */}
+                   
                     <div className="progress-circle">
                       <svg width="54" height="54">
                         <circle
@@ -148,7 +152,35 @@ function Aboutpage() {
 
 
         </div >
-      </div >
+      </div > */}
+      <div className='container-fluid'>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 p-0 m-0">
+            <div className="about_para">
+              <div className="about_content">
+                <p className="about_title">
+                  <span>|</span>
+                  <span className="typing_text"> About Us</span>
+                </p>
+
+                <p>
+                  StrujNova is a next-generation electric mobility and clean-energy company committed to accelerating India’s transition toward a smarter, greener, and fully sustainable future. We design and develop high-performance EV chargers, power electronics, CMS platforms, IoT-driven energy solutions, and renewable-integrated infrastructure that redefine how India charges, moves, and progresses.
+                </p>
+
+                <button className="read-more-btn mt-4">
+                  Read More <FaArrowRight className="read-arrow" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 col-md-6 col-sm-12 p-0 m-0">
+            <img src={aboutimg1} class="img-fluid" alt="..." />
+          </div>
+        </div>
+      </div>
+      <Vission_mission/>
     </>
   )
 }

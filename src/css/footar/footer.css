@@ -1,0 +1,167 @@
+.footer-back {
+    background-color: #00170E;
+    color: white;
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background images (left + right) */
+.footer-bg-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 220px;
+    opacity: 0.6;
+}
+
+.footer-bg-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 220px;
+    transform: scaleX(-1);
+    opacity: 0.6;
+}
+
+/* LOGO */
+.footer_logo {
+    width: 180px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.company-name {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+/* QUICK LINKS */
+.quick_link {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.quick-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-list li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.quick-list li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: white;
+    font-size: 18px;
+}
+
+/* CONTACT */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    
+}
+
+/* Bottom Line */
+.footer-line {
+    border-top: 1px solid #3a3a3a;
+    margin: 30px 0;
+    width: 100%;
+}
+
+/* SOCIAL + COPYRIGHT */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-icons i {
+    font-size: 22px;
+    margin: 0 6px;
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* ----------------------------- */
+/* RESPONSIVENESS */
+/* ----------------------------- */
+
+/* Tablets (≤ 992px) */
+@media (max-width: 992px) {
+    .quick-links-container,
+    .contact-box {
+        margin-top: 30px;
+        text-align: left;
+    }
+
+    .quick-list li {
+        font-size: 15px;
+    }
+
+    .contact-item {
+        font-size: 15px;
+    }
+}
+
+/* Mobile (≤ 576px) */
+@media (max-width: 576px) {
+
+    .container-back {
+        padding: 30px 10px;
+    }
+
+    .quick_link {
+        text-align: center;
+    }
+
+    .quick-links-container .row {
+        text-align: left;
+    }
+
+    /* Center logo */
+    .col-lg-4 img {
+        display: block;
+        margin: 0 auto 20px;
+        max-width: 160px;
+    }
+
+    /* Quick links in 1 column for mobile */
+    .quick-links-container .col-6 {
+        width: 100%;
+    }
+
+    .quick-list li {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    /* Contact box stacks naturally */
+    .contact-box {
+        margin-top: 25px;
+        text-align: left;
+    }
+
+    .contact-item {
+        font-size: 15px;
+    }
+}
