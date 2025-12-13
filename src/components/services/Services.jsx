@@ -8,7 +8,8 @@ import { MdOutlineConstruction } from "react-icons/md";
 import { FaPersonRunning } from "react-icons/fa6";
 import { SiEsotericsoftware } from "react-icons/si";
 import { FaHandsHoldingCircle } from "react-icons/fa6";
-
+import serviceimg from '../../assets/service/service_img-removebg-preview.png'
+import serviceCornerImg from '../../assets/footer/footer_img1.png'
 function Services() {
 
   const [open, setOpen] = useState(false);
@@ -88,7 +89,7 @@ function Services() {
       title: "Investment & Partnership Programs",
       icon: <FaHandsHoldingCircle class="custom-icon" />,
       para: "We offer multiple partnership models, including EV charging franchises, landowner collaboration, and investor onboarding for network expansion.",
-       points: [
+      points: [
         "EV charging franchise model",
         "Landowner partnership",
         "Investor onboarding for EV network development",
@@ -107,36 +108,64 @@ function Services() {
 
   return (
     <>
-      <div className='service_back_color' data-aos="fade-up">
-        <div className='container pt-5 pb-5'>
-          <p className='custom-our-services'>- Our Service -</p>
-          <p className='service_title mt-3'>Service Providers for Electric Vehicles</p>
+      <div className="service-hero-section">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-6 col-md-6 col-sm-12 text-section">
+              <p className="service-subtitle">Our Service</p>
+              <p className="service-main-title">
+                We provide reliable and innovative solutions for electric vehicle owners and businesses. From charging infrastructure installation to maintenance and support, our team ensures your EV operations run smoothly and efficiently.
+              </p>
+              <hr className="service-divider d-md-block d-none" />
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-12 img-section">
+              <img src={serviceimg} alt="Services" className="service-img" />
+            </div>
+          </div>
+        </div>
+      </div>
 
+
+      <div className='service_back_color' data-aos="fade-up">
+        <div className='text-center pt-4 header-service-name'>
+          <p><b>Company Overview</b></p>
+        </div>
+
+        {/* <p className='service_title mt-3'>Service Providers for Electric Vehicles</p> */}
+        <div className="intro-container">
+          <h2 className="intro-text">
+            At our EV service company, we are committed to powering the future with reliable, efficient, and innovative electric mobility solutions.
+            From seamless charging infrastructure to expert maintenance and support, we ensure every electric vehicle runs at its best.
+            With a focus on sustainability and next-generation technology, we strive to make clean energy accessible for all.
+            <span className="highlight"> Charging Today! Tomorrow </span> — driving a greener world, one charge at a time.
+          </h2>
+        </div>
+
+        <div className='container pb-5'>
           <div className='mt-5'>
             <div class="row">
               {
                 servicedata.map((a) => {
                   return (
                     <>
-                      <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card custom_service_card mt-3 equal-height-card">
-                          <div class="card-body equal-height-body">
-                            {a.icon}
-                            <p class="custom-title1 mt-4">{a.title}</p>
+                      <div className="col-lg-4 col-md-6 col-sm-12 mb-3">
+                        <div className="service-card">
+                          <div className="service-icon">{a.icon}</div>
 
-                            <p className="service-card-para truncated-text">{a.para}</p>
+                          <h4 className="service-title">{a.title}</h4>
 
-                            <button
-                              className="learn-more-btn card-bottom-btn"
-                              onClick={() => handleLearnMore(a)}
-                            >
-                              Learn More <span className="arrow">&#8594;</span>
-                            </button>
+                          <p className="service-desc">
+                            {a.para}
+                          </p>
 
-                          </div>
+                          <button
+                            className="learn-more-btn"
+                            onClick={() => handleLearnMore(a)}
+                          >
+                            Learn More →
+                          </button>
                         </div>
                       </div>
-
 
                     </>
                   )

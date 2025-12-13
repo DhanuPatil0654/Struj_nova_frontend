@@ -1,38 +1,48 @@
-import React from 'react'
-import '../../css/vission_mission/vission_mission.css'
+
+import React from "react";
+import "../../css/vission_mission/vission_mission.css";
+import { FaTrophy } from "react-icons/fa";
+import { FaMedal } from "react-icons/fa";
 function Vission_mission() {
     return (
         <>
-            <div className='vission_mission_back' data-aos="fade-up">
-                <div className='container pt-5 pb-5 '>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="card vission_card">
-                                <div class="card-body">
-                                    <p className='vission_mission_title'><span>|</span> VISSION</p>
-                                    <p className='vission_para mt-3'>
-                                        Our vision is to drive India’s evolution into a clean, intelligent, and energy-independent nation by pioneering world-class EV and sustainable energy technologies. We aim to build an ecosystem that empowers every citizen, fuels economic growth, and safeguards the planet for future generations. Through innovation, reliability, and a commitment to sustainability, we envision India as a global leader in smart mobility and green energy
-                                    </p>
+            <div className="vission_mission_back" data-aos="fade-up">
+                <div className="container pt-5 pb-5">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-6 col-md-6 col-sm-12 mb-4">
+                            <div className="vission_card">
+                                <div className="icon_circle">
+                                    <FaTrophy size={30} color="#fff" />
                                 </div>
+
+                                <h4 className="vission_title">Our Vision</h4>
+
+                                <p className="vission_text">
+                                    Our vision is to drive India’s evolution into a clean,
+                                    intelligent, and energy-independent nation by pioneering
+                                    world-class EV and sustainable energy technologies.
+                                </p>
                             </div>
                         </div>
-                      
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="card vission_card">
-                                <div class="card-body">
-                                    <p className='vission_mission_title'><span>|</span> MISSION</p>
-                                    <p className='vission_para mt-3'>
-                                        Our mission is to accelerate the nation’s transition to clean mobility by building advanced EV charging systems and intelligent CMS platforms that make electric vehicle adoption seamless and efficient. We strive to design a future-ready energy infrastructure that integrates renewable power, smart-grid technology, and high-performance storage solutions to ensure stability and sustainability.
-                                    </p>
+                        <div className="col-lg-6 col-md-6 col-sm-12 mb-4">
+                            <div className="vission_card">
+                                <div className="icon_circle">
+                                    <FaMedal size={32} color="#fff" />
                                 </div>
+                                <h4 className="vission_title">Our Mission</h4>
+                                <p className="vission_text">
+                                    Our mission is to accelerate the nation’s transition to clean
+                                    mobility by building advanced EV charging systems and CMS
+                                    platforms that make EV adoption seamless and efficient.
+                                </p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
-
         </>
-    )
+    );
 }
 
-export default Vission_mission
+export default Vission_mission;

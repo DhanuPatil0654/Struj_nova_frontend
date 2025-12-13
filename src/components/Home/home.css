@@ -1,9 +1,9 @@
-/* Transparent black background with centered text */
+/* 
 .background_color {
   background: rgba(0, 0, 0, 0.7);
-  /* Transparent black */
+
   color: white;
-  /* height: 100vh; */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +13,7 @@
 
 }
 
-/* Green heading */
+
 .head_text {
   color: #00ff7f;
   font-family: 'Orbitron', sans-serif !important;
@@ -26,13 +26,12 @@
 
 }
 
-/* Responsive paragraph */
 .background_color p {
   font-size: 1.2rem;
   margin: 0;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
   .head_text {
     font-size: 2.2rem;
@@ -78,9 +77,9 @@
 
 .slider-card {
   background: #f9f9f9;
-  /* or a background image with `background-image` */
+
   padding: 40px 20px 20px 20px;
-  /* extra top padding for image overlap */
+
 
   border-radius: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -153,26 +152,89 @@
   }
 
   .feedback-text {
-    font-size: 0.95rem;
+    /* font-size: 0.95rem;
     -webkit-line-clamp: 4;
     /* Show 4 lines max */
-    overflow: hidden;
+    /* overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
   }
+} */ */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Text background box */
+.text-bg-box {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 180, 216, 0.08),
+    rgba(0, 95, 115, 0.12)
+  );
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  display: inline-block;
 }
 
+/* Heading */
+.head_text {
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #003049;
+}
+
+/* Tagline */
+.tagline {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #0077b6;
+  margin-bottom: 15px;
+}
+
+/* Paragraph */
+.ev-para {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  max-width: 520px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .text-bg-box {
+    padding: 25px;
+  }
+
+  .head_text {
+    font-size: 2.2rem;
+  }
+
+  .ev-para {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+}
 
 .rounded-small {
   width: 50px;
-  /* small fixed width */
+
   height: 50px;
-  /* small fixed height */
+
   border-radius: 50%;
-  /* makes the image round */
+
   object-fit: cover;
-  /* keep aspect ratio and cover the box */
+
   display: inline-block;
   background-color: #4b4646;
   padding: 5px;
@@ -181,14 +243,148 @@
 @media (max-width: 480px) {
   .feedback-quote {
     font-size: 16px !important;
-    /* smaller size for mobile */
+
     line-height: 1.4;
   }
 }
 
-/* Tablet View (optional) */
+
 @media (max-width: 768px) {
   .feedback-quote {
     font-size: 20px;
   }
+} */
+
+
+
+
+.ev-para {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-top: 15px;
+  max-width: 520px;
+  color: #444;
+}
+
+
+@media (max-width: 768px) {
+  .ev-para {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+}
+
+
+/* 3D container */
+.image-3d-wrapper {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+/* Image 3D effect */
+.image-3d {
+  transition: transform 0.15s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Smooth reset when mouse leaves */
+.image-3d-wrapper:hover .image-3d {
+  transition: transform 0.15s ease-out;
+}
+
+
+.home-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 420px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .home-img {
+    max-height: 360px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .home-img {
+    max-height: 280px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-bg-box {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+.background_color {
+  background: linear-gradient(135deg, #00170e, #004d1a); /* gradient from dark to lighter shade */
+  color: white; /* text color */
+  padding: 60px 0;
+  position: relative;
+
+  /* Triangle / slanted shape */
+  clip-path: polygon(
+    0 0,        /* top-left */
+    100% 0,     /* top-right */
+    100% 100%,  /* bottom-right */
+    0% 80%      /* bottom-left slant */
+  );
+}
+
+
+/* Text box adjustments */
+.text-bg-box h1,
+.text-bg-box p {
+  color: inherit; /* inherit white color from parent */
+}
+
+
+.vertical-divider {
+  width: 4px; /* thickness of the line */
+  height: 85%; /* stretch to match row height */
+  border-radius: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),  /* top transparent */
+    rgba(255, 255, 255, 0.8), /* middle white */
+    rgba(255, 255, 255, 0)   /* bottom transparent */
+  );
+}
+
+/* Center the divider column */
+.col-lg-2.d-flex {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center in row */
+}
+
+/* Hide on mobile & tablet */
+@media (max-width: 991px) {
+  .vertical-divider {
+    display: none;
+  }
+}
+
+
+
+.my-5
+
+ {
+    margin-top: 0rem !important;
+    margin-bottom: 3rem !important;
 }

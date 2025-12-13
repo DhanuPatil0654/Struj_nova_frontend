@@ -220,8 +220,8 @@ const Contact_us = () => {
                 <br /> Here.
               </h3>
               <p>
-                With years of innovation in EV technology, STRuj Nova delivers reliable solutions in electric vehicles, power systems, battery technology, and smart mobility infrastructure.
-                Trusted by customers across industries and regions, we are committed to powering a cleaner, sustainable future.
+                Struj Nova is a fast-growing EV tech startup focused on building reliable, future-ready solutions in electric mobility.
+                From intelligent power systems to advanced battery technology and smart charging infrastructure, we innovate to make clean mobility accessible for everyone.
                 <br />
                 Have questions about our EV products or services?
                 Reach out to us — we’re here to guide you with the right solution.
