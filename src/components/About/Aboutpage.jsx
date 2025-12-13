@@ -44,7 +44,7 @@ function Aboutpage() {
 
       <div className='container mt-5'>
         <p className='para_about'>
-          At Struj Nova deep expertise in R&D, manufacturing, and energy technology, we create scalable solutions for individuals, businesses, fleets, industries, and smart cities — enabling seamless charging, intelligent energy distribution, and long-term operational excellence.
+          At StrujNova deep expertise in R&D, manufacturing, and energy technology, we create scalable solutions for individuals, businesses, fleets, industries, and smart cities — enabling seamless charging, intelligent energy distribution, and long-term operational excellence.
           Our work is driven by sustainability, user convenience, national progress, and a commitment to clean energy for all.As the first-generation pioneers of India’s EV and clean-energy revolution, we take responsibility for advancing the nation’s technological independence, strengthening indigenous innovation, and supporting the vision of an E-Atmanirbhar Bharat. We believe that clean mobility should be effortless, accessible, and open to everyone — empowering communities while reducing environmental impact.
           At StrujNova, we are not just building products.
           We are building India’s electric era — a future where mobility is cleaner, energy is smarter, and progress is sustainable.

@@ -53,8 +53,8 @@ const features = [
 const techFeatures = [
     {
         icon: <FaBatteryFull />,
-        title: "Battery Efficiency",
-        description: "Optimized battery systems for longer range and faster charging."
+        title: "Smart Charging",
+        description: "Optimized battery systems for longer range and faster charging through our AI Integrated Machines ."
     },
     {
         icon: <FaBrain />,
@@ -93,9 +93,6 @@ function Features() {
                     ))}
                 </div>
             </div>
-
-
-
             <div className="technology-container">
                 <h2 className="tech-title">Technology & Innovation</h2>
                 <p className="tech-subtitle">

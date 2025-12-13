@@ -231,7 +231,7 @@ const Contact_us = () => {
                 <div className="info-block mb-3">
                   <h5>Our Address</h5>
                   <p className="mb-0">
-                    A-401, Barate Complex, Karvenagar, Pune-52 (411052),
+                    Karvenagar, Pune-52 (411052),
                     Maharashtra, India
                   </p>
                 </div>
@@ -286,8 +286,8 @@ const Contact_us = () => {
 
                 <div className="info-block">
                   <h5>Contact</h5>
-                  <p className="mb-0">+91 89995 - 68504</p>
-                  <p className="mb-0">+91 92840 - 20090</p>
+                  <p className="mb-0">+91 8275108855</p>
+                  {/* <p className="mb-0">+91 92840 - 20090</p> */}
                 </div>
               </div>
             </div>

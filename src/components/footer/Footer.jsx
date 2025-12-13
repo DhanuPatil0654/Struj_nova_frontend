@@ -15,7 +15,7 @@ function Footer() {
                         {/* LEFT – LOGO */}
                         <div class="col-lg-4 col-md-4 col-sm-12 text-center">
                             <img src={logo} class="footer_logo" alt="logo" />
-                            <p class="company-name">StrujNova Energy</p>
+                            {/* <p class="company-name">StrujNova Energy</p> */}
                         </div>
 
                         {/* MIDDLE – QUICK LINKS */}
@@ -49,7 +49,7 @@ function Footer() {
 
                             <p class="contact-item">
                                 <i class="fa-solid fa-phone contact-icon"></i>
-                                +91-8999568504 <span>|</span>+91-9284020090
+                                +91-8275108855 <span></span>
                             </p>
 
                             <p class="contact-item">
@@ -59,7 +59,7 @@ function Footer() {
 
                             <p class="contact-item">
                                 <FaLocationDot class="react-icon" />
-                                A-401, Barate Complex, Karvenagar, Pune-52
+                                Karvenagar, Pune-52
                             </p>
                         </div>
                     </div>
