@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap:https://uatstruj.vercel.app/sitemap.xml
+Sitemap:https://uatstrujnova.vercel.app/sitemap.xml
