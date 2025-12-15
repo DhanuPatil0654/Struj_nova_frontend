@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './home.css';
 import homeimg from '../../assets/Home/charger_img.png';
 import Features from '../Features/Features';
 function Homepage() {
+
+  
 
 
   const isTouchDevice = () => {
@@ -36,6 +38,10 @@ function Homepage() {
     const img = e.currentTarget.querySelector("img");
     img.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
   };
+
+  const [showTooltip, setShowTooltip] = useState(true);
+
+
 
 
   return (
@@ -82,7 +88,23 @@ function Homepage() {
         </div>
       </div>
 
-       <Features />
+      <Features />
+
+      {showTooltip && (
+        <div className="fixed-tooltip slide-in">
+          <span className="tooltip-text ">
+            ⚡<b> Powering the Future of Electric Mobility </b>
+          </span>
+
+          <span
+            className="tooltip-close"
+            onClick={() => setShowTooltip(false)}
+          >
+            ✕
+          </span>
+        </div>
+      )}
+
 
 
 

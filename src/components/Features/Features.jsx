@@ -5,11 +5,14 @@ import { FaBolt, FaCar, FaBatteryFull, FaChargingStation, FaLeaf, FaCogs, FaPlug
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
+import { IoIosPeople } from "react-icons/io";
+import { GiStairsGoal } from "react-icons/gi";
+import { GiIndiaGate } from "react-icons/gi";
 
 const features = [
     {
         icon: <FaBolt />,
-        title: "Fast Charging",
+        title: "Thunder speed Charging",
         description: "Charge your EV quickly and efficiently with our advanced charging stations."
     },
     {
@@ -24,29 +27,45 @@ const features = [
     },
     {
         icon: <FaChargingStation />,
-        title: "Charging Network",
+        title: "Developing Charging Network",
         description: "Access a wide network of charging stations across cities and highways."
     },
     {
         icon: <FaLeaf />,
-        title: "Eco-Friendly",
-        description: "Commitment to sustainability with low-carbon footprint vehicles."
+        title: "Green Energy Evaluation",
+        description: "Commitment to sustainability with low-carbon footprint vehicles and Eco-friendly Charging."
     },
     {
         icon: <FaCogs />,
-        title: "Smart Features",
+        title: "Smart and advanced Features",
         description: "Advanced AI and smart connectivity features for a seamless experience."
     },
     {
         icon: <FaPlug />,
         title: "Plug & Play",
-        description: "Simple and convenient integration with home and public charging points."
+        description: "Zero Obstacle charging with clear instructions, lighting and safty features."
     },
     {
         icon: <FaTachometerAlt />,
         title: "High Performance",
+        description: "Built for speed, efficiency, and reliability, our EV solutions ensure powerful performance and consistent results across every drive and operation."
+    },
+     {
+        icon: <IoIosPeople />,
+        title: "Sustainable and Environment Commitment",
         description: "Efficient, powerful, and smooth driving with cutting-edge EV technology."
-    }
+    },
+     {
+        icon: <GiStairsGoal />,
+        title: "Future-ready Innovations",
+        description: "We develop forward-thinking EV technologies designed to adapt, scale, and evolve with the future of electric mobility."
+    },
+     {
+        icon: <GiIndiaGate />,
+        title: "Making India a global EV Pioneer",
+        description: "Our mission is to accelerate India’s EV revolution by building sustainable, high-performance solutions that empower a cleaner and smarter future."
+    },
+    
 ];
 
 
@@ -71,6 +90,7 @@ const techFeatures = [
         title: "Autonomous Tech",
         description: "Advanced driver assistance and autonomous driving capabilities."
     },
+    
 ];
 
 
@@ -81,7 +101,7 @@ function Features() {
                 <h1 className="gradient-text">Our Features</h1>
                 {/* <div className="underline-gradient"></div> */}
 
-                <div className="features-grid">
+                <div className="features-grid mb-5">
                     {features.map((feature, index) => (
                         <div key={index} className="feature-card">
                             <div className="feature-icon-circle">

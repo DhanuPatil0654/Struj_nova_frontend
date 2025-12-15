@@ -10,16 +10,22 @@ import { SiEsotericsoftware } from "react-icons/si";
 import { FaHandsHoldingCircle } from "react-icons/fa6";
 import serviceimg from '../../assets/service/service_img-removebg-preview.png'
 import serviceCornerImg from '../../assets/footer/footer_img1.png'
+import { FaGraduationCap } from "react-icons/fa6";
+import { RiCustomerService2Fill } from "react-icons/ri";
+import { MdFlight } from "react-icons/md";
+
 function Services() {
 
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState(null);
 
+  const [showTooltip, setShowTooltip] = useState(true);
+
 
 
   const servicedata = [
     {
-      title: "EV Charging Solutions (End-to-End) ",
+      title: "Smart & Scalable Complete EV Charging infrastructure",
       icon: <GiBatteryPackAlt class="custom-icon" />,
       para: "Complete hardware + software + operations ecosystem Our services cover public, commercial, and residential charging setups, fleet charging infrastructure, and complete installation & commissioning.",
       points: [
@@ -27,9 +33,12 @@ function Services() {
         "EV AC Chargers (3.3kW–22kW)",
         "Fleet charging setup & deployment",
         "Public, Commercial & Residential Charging Solutions",
+        "Load study and infra requirement analysis",
         "Charger Installation & Commissioning",
         "Multi-brand Charger Repair & Upgradation",
-        "24/7 charger monitoring & support"
+        "Single gun, dual gun & multi-gun Architectures",
+
+
       ]
     },
     {
@@ -42,8 +51,11 @@ function Services() {
         "Payment, Wallet & Billing Integration",
         "OCPP Backend & Interoperability",
         "Host management & revenue sharing",
-        "Real-time monitoring & analytics",
-        "Remote diagnostics & customer support"
+        "Real-time monitoring & analytics with Remote troubleshooting",
+        "Remote diagnostics & customer support",
+        "Plug & Charge + Autocharge support with futuristic features",
+        "Latest OCPP compatible (1.6J - 2.0.1) controllers with high efficiency Power modules"
+
       ]
     },
     {
@@ -53,11 +65,21 @@ function Services() {
       points: [
         "EV infra planning for cities, fleets & corporates",
         "Technical load study & feasibility",
-        "Single Line Diagram (SLD) design",
-        "CAD/3D cabinet design & thermal study",
+
         "Component rating selection & optimization",
         "Energy efficiency consulting",
         "Project documentation & EPC support"
+      ]
+    },
+    {
+      title: "Customer focused Support & Maintenance System",
+      icon: <RiCustomerService2Fill class="custom-icon" />,
+      para: "We provide reliable, customer-first support and maintenance services to ensure uninterrupted EV operations. Our expert team offers proactive monitoring, timely assistance, and efficient maintenance solutions to keep your vehicles and charging infrastructure performing at their best.",
+      points: [
+        "24/7 technical customer support",
+        "Remote and On-site Services",
+        "Customer training and product knowledge sessions",
+        "Preventive and corrective maintenance",
       ]
     },
     {
@@ -68,11 +90,15 @@ function Services() {
         "EV charger technology workshops",
         "Technical training for ITI/Engineering students",
         "Software & OCPP protocol training",
-        "Electrical safety & load study sessions"
+        "Electrical safety & load study sessions",
+        "Encouraging people to switch to electric vehicles for a sustainable future",
+        "Creating Employment Opportunities in the EV Sector",
+        "Supporting Make-in-India and आत्मनिर्भर भारत "
+
       ]
     },
     {
-      title: "Software, IoT & Digital Technology",
+      title: "Advance IoT, Software & Digital Technology",
       icon: <SiEsotericsoftware class="custom-icon" />,
       para: "Our technology suite includes CMS platforms, mobile applications (User & CPO), and OCPP backend integration. We develop IoT gateways with cloud connectivity, real-time monitoring dashboards, and predictive maintenance systems.",
       points: [
@@ -82,7 +108,21 @@ function Services() {
         "IoT gateway + cloud infrastructure",
         "Real-time monitoring dashboard",
         "Predictive maintenance system",
-        "Payment gateway & wallet integration"
+        "Payment gateway & wallet integration",
+        "Websocket + OCPP Communication Modules",
+        "Custom Software Solutions development Tailored to Client Needs"
+      ]
+    },
+    {
+      title: "Engineering, Electrical & Civil Services",
+      icon: <FaGraduationCap class="custom-icon" />,
+      para: "We offer multiple partnership models, including EV charging franchises, landowner collaboration, and investor onboarding for network expansion.",
+      points: [
+        "Trasformer Load assessment",
+        "LEarthing & Electrical Safety Audit",
+        "EV site Readiness Execution",
+        "Electrical Turnkey project solutions",
+        "Civil groundwork for EV Charging Stations"
       ]
     },
     {
@@ -90,11 +130,24 @@ function Services() {
       icon: <FaHandsHoldingCircle class="custom-icon" />,
       para: "We offer multiple partnership models, including EV charging franchises, landowner collaboration, and investor onboarding for network expansion.",
       points: [
-        "EV charging franchise model",
+        "Franchise based EV charging station setups",
         "Landowner partnership",
         "Investor onboarding for EV network development",
         "Corporate tie-ups & fleet electrification projects",
         "Dealership opportunities"
+      ]
+    },
+    {
+      title: "Futuristic EV Solutions & Innovations",
+      icon: <MdFlight class="custom-icon" />,
+      para: "We provide reliable, customer-first support and maintenance services to ensure uninterrupted EV operations. Our expert team offers proactive monitoring, timely assistance, and efficient maintenance solutions to keep your vehicles and charging infrastructure performing at their best.",
+      points: [
+        "AI-based charging optimization",
+        "Fast battery cooling and thermal management",
+        "Smart grid integration",
+        "V2G (Vehicle-to-Grid), V2V (Vehicle-to-Vehicle) likewise technology compatible architecture",
+        "Robotic charging concepts with intelligent AI bots",
+        "Wireless Charging (research roadmap)"
       ]
     }
   ]
@@ -119,8 +172,16 @@ function Services() {
               <hr className="service-divider d-md-block d-none" />
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 img-section">
-              <img src={serviceimg} alt="Services" className="service-img" />
+              <div className="image-3d-wrapper">
+                <img
+                  src={serviceimg}
+                  alt="Services"
+                  className="service-img image-3d-animate"
+                />
+              </div>
             </div>
+
+
           </div>
         </div>
       </div>
@@ -143,7 +204,7 @@ function Services() {
 
         <div className='container pb-5'>
           <div className='mt-5'>
-            <div class="row">
+            <div class="row justify-content-center">
               {
                 servicedata.map((a) => {
                   return (
@@ -175,6 +236,23 @@ function Services() {
           </div>
         </div>
       </div>
+
+      {showTooltip && (
+        <div className="fixed-tooltip slide-in">
+          <span className="tooltip-text ">
+            ⚡<b> Smart EV Charging & Infrastructure Solutions </b>
+          </span>
+
+          <span
+            className="tooltip-close"
+            onClick={() => setShowTooltip(false)}
+          >
+            ✕
+          </span>
+        </div>
+      )}
+
+
 
       {open && (
         <div className="popup-overlay">

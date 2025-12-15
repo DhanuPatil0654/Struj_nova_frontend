@@ -336,7 +336,7 @@
 .intro-text .highlight {
   font-weight: 700;
   color: #007b55;
- 
+
 }
 
 
@@ -353,6 +353,9 @@
     font-size: 16px;
     line-height: 1.5;
     padding: 10px;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -415,6 +418,7 @@
 
 @media (max-width: 480px) {
   .service-main-title {
+    justify-content: justify !important;
     font-size: 20px;
   }
 
@@ -430,9 +434,88 @@
 
 .service-divider {
   border: 0;
-  height: 2px;   
-  color: white;           
-  background-color: white; 
-  width: 100px;             
-  margin: 10px 0;            
+  height: 2px;
+  color: white;
+  background-color: white;
+  width: 100px;
+  margin: 10px 0;
+}
+
+
+
+
+
+
+
+.fixed-tooltip {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+
+  background: linear-gradient(135deg, #00170e, #004d1a);
+  /* gradient from dark to lighter shade */
+  color: #fff;
+
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: min(90vw, 420px);
+  /* ✅ responsive width */
+  white-space: nowrap;
+
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+/* Close button */
+.tooltip-close {
+  cursor: pointer;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* 📱 Mobile */
+@media (max-width: 576px) {
+  .fixed-tooltip {
+    bottom: 10px;
+    right: 10px;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* 📱 Tablet */
+@media (max-width: 768px) {
+  .fixed-tooltip {
+    width: min(95vw, 360px);
+  }
+}
+
+/* Slide in from right */
+.slide-in {
+  animation: slideFromRight 0.8s ease-out forwards;
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

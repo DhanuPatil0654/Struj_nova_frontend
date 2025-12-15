@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import aboutimg from '../../assets/about/about_page.jpg'
 import chargerimg from '../../assets/about/chargerimg.png'
 import chargermonry from '../../assets/about/chargermoney.png'
@@ -8,6 +8,11 @@ import { FaArrowRight } from "react-icons/fa";
 import Vission_mission from '../vissionmission/Vission_mission'
 import aboutimg from '../../assets/about/aboutpage_img-removebg-preview.png'
 function Aboutpage() {
+  
+    const [showTooltip, setShowTooltip] = useState(true);
+  
+  
+  
   return (
     <>
 
@@ -51,6 +56,22 @@ function Aboutpage() {
         </p>
       </div>
       <Vission_mission />
+       {showTooltip && (
+        <div className="fixed-tooltip slide-in">
+          <span className="tooltip-text ">
+            🚀<b>  Next-Gen EV Charging, Software & Energy Solutions </b>
+          </span>
+
+          <span
+            className="tooltip-close"
+            onClick={() => setShowTooltip(false)}
+          >
+            ✕
+          </span>
+        </div>
+      )}
+
+
     </>
   )
 }

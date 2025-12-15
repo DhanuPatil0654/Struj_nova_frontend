@@ -2,7 +2,7 @@ import React from 'react'
 import '../../css/footar/footer.css'
 import { IoMdMail } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
-import logo from '../../assets/logo/StrujNova_LOGO.png'
+import logo from '../../assets/footer/loading_im.png'
 import left_img from '../../assets/footer/footer_img3.png'
 import right_img from '../../assets/footer/footer_img1.png'
 function Footer() {
@@ -41,6 +41,7 @@ function Footer() {
                                     </ul>
                                 </div>
                             </div>
+
                         </div>
 
                         {/* RIGHT – CONTACT */}
@@ -83,7 +84,7 @@ function Footer() {
 
                 {/* BACKGROUND LEFT & RIGHT DESIGNS */}
                 <img src={left_img} class="footer-bg-left" />
-                
+
             </div>
 
 
