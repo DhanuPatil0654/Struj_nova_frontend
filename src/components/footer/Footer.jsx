@@ -5,6 +5,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import logo from '../../assets/footer/loading_im.png'
 import left_img from '../../assets/footer/footer_img3.png'
 import right_img from '../../assets/footer/footer_img1.png'
+import { Link } from 'react-router-dom';
 function Footer() {
     return (
         <>
@@ -25,8 +26,10 @@ function Footer() {
                             <div class="row">
                                 <div class="col-6">
                                     <ul class="quick-list">
-                                        <li>Home</li>
-                                        <li>About Us</li>
+                                        <Link to="/" className="nav-link-footer" onClick={() => window.scrollTo(0, 0)}>
+                                            <li>Home</li>
+                                        </Link>
+                                        <Link to='/about' className="nav-link-footer" onClick={() => window.scrollTo(0, 0)}><li>About Us</li></Link>
                                         <li>Products</li>
                                         <li>Facilities</li>
                                     </ul>

@@ -167,3 +167,12 @@
 }
 
 
+.nav-link-footer {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link-footer:hover {
+  color: white;        /* keeps text white on hover */
+  text-decoration: none;
+}
