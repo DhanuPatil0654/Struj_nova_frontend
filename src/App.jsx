@@ -45,7 +45,7 @@ function App() {
             <img
               src={loadingimg}   // your 3D EV image (PNG/WebP)
               alt="EV Charging"
-              className="ev-3d-image"
+              className="ev-3d-image "
             />
           </div>
 
