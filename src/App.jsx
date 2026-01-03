@@ -11,6 +11,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import './App.css'
 import loadingimg from './assets/loading/loading_im.png'
+import Serviceinfo from './components/serviceinfo/Serviceinfo';
+import ProductCom_charger from './components/product_com/ProductCom_charger';
 
 function App() {
   useEffect(() => {
@@ -39,7 +41,7 @@ function App() {
 
   return (
     <>
-      {loading && (
+      {/* {loading && (
         <div className="loader-overlay">
           <div className="loader-3d-wrapper">
             <img
@@ -51,22 +53,23 @@ function App() {
 
           <p className="loader-text">Charging the Future...</p>
         </div>
-      )}
+      )} */}
 
-      <div className={`page-content ${loading ? 'blurred' : ''}`}>
+      {/* <div className={`page-content ${loading ? 'blurred' : ''}`}> */}
 
         <BrowserRouter>
           <NavbarHeader />
           <Routes>
             <Route path='/' element={<Homepage />}></Route>
             <Route path='/service' element={<Services />}></Route>
+            <Route path='/our-products' element={<ProductCom_charger />}></Route>
             <Route path='/about' element={<Aboutpage />}></Route>
             <Route path='/contact-us' element={<Contact_us />}></Route>
           </Routes>
           <Footer />
 
         </BrowserRouter>
-      </div>
+      {/* </div> */}
     </>
   )
 }

@@ -13,6 +13,7 @@ import serviceCornerImg from '../../assets/footer/footer_img1.png'
 import { FaGraduationCap } from "react-icons/fa6";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { MdFlight } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
 
 function Services() {
 
@@ -21,6 +22,7 @@ function Services() {
 
   const [showTooltip, setShowTooltip] = useState(true);
 
+  const navigate = useNavigate();
 
 
   const servicedata = [
@@ -155,6 +157,7 @@ function Services() {
   const handleLearnMore = (card) => {
     setSelected(card);
     setOpen(true);
+   
   };
 
 
@@ -209,9 +212,11 @@ function Services() {
                 servicedata.map((a) => {
                   return (
                     <>
-                      <div className="col-lg-4 col-md-6 col-sm-12 mb-3">
-                        <div className="service-card">
-                          <div className="service-icon">{a.icon}</div>
+                      <div className="col-lg-4 col-md-6 col-sm-12 mb-4 pb-4">
+                        <div className="service-card ">
+                          <div className="service-icon">
+                            {a.icon}
+                          </div>
 
                           <h4 className="service-title">{a.title}</h4>
 
@@ -227,6 +232,7 @@ function Services() {
                           </button>
                         </div>
                       </div>
+
 
                     </>
                   )

@@ -30,7 +30,7 @@ function Footer() {
                                             <li>Home</li>
                                         </Link>
                                         <Link to='/about' className="nav-link-footer" onClick={() => window.scrollTo(0, 0)}><li>About Us</li></Link>
-                                        <li>Products</li>
+                                        <Link to='/our-products' className="nav-link-footer" onClick={() => window.scrollTo(0, 0)}><li>Products</li></Link>
                                         <li>Facilities</li>
                                     </ul>
                                 </div>

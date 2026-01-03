@@ -51,6 +51,12 @@ function NavbarHeader() {
                                
                             </a>
                         </li>
+                        <li className="nav-item dropdown">
+                            <a href="/our-products" className="nav-link">
+                                PRODUCT
+
+                            </a>
+                        </li>
                         {/* <li className="nav-item dropdown">
                             <a href="#gallery" className="nav-link">
                                 GALLERY
@@ -118,13 +124,15 @@ function NavbarHeader() {
                             {/* SERVICES <span className="dropdown-icon">▼</span> */}
                         </a>
                     </li>
-                    {/* <li className="sidebar-item">
-                        <a href="#gallery" className="sidebar-link" onClick={closeSidebar}>
-                            GALLERY
+                    
+                    
+                     <li className="sidebar-item">
+                        <a href="/our-products" className="sidebar-link" onClick={closeSidebar}>
+                            PRODUCT
                             
                         </a>
                     </li>
-                    <li className="sidebar-item">
+                   {/* <li className="sidebar-item">
                         <a href="#blog" className="sidebar-link" onClick={closeSidebar}>
                             BLOG
                            
