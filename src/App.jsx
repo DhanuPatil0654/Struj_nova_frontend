@@ -41,22 +41,7 @@ function App() {
 
   return (
     <>
-      {/* {loading && (
-        <div className="loader-overlay">
-          <div className="loader-3d-wrapper">
-            <img
-              src={loadingimg}   // your 3D EV image (PNG/WebP)
-              alt="EV Charging"
-              className="ev-3d-image "
-            />
-          </div>
-
-          <p className="loader-text">Charging the Future...</p>
-        </div>
-      )} */}
-
-      {/* <div className={`page-content ${loading ? 'blurred' : ''}`}> */}
-
+  
         <BrowserRouter>
           <NavbarHeader />
           <Routes>
@@ -69,7 +54,7 @@ function App() {
           <Footer />
 
         </BrowserRouter>
-      {/* </div> */}
+     
     </>
   )
 }
