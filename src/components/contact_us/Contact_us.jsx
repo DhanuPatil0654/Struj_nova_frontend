@@ -7,6 +7,10 @@ import linkedinIcon from "../../assets/icons/icons/Group.png";
 import whatsappIcon from "../../assets/icons/icons/logos_whatsapp-icon.png";
 import mailIcon from "../../assets/icons/icons/mail.png";
 
+const GOOGLE_WEB_APP_URL =
+  "https://script.google.com/macros/s/AKfycbxeNENB-ksqEXkTbmXyKO7xos-_H1rz0rVat_Oo7n_8sOYXTYbT4qMSxQpHh2CT-f_CJA/exec";
+
+
 const Contact_us = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -82,32 +86,44 @@ const Contact_us = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const newErrors = {};
+  const newErrors = {};
 
-    if (!formData.name.trim()) newErrors.name = "Please enter Name.";
-    if (!formData.email.trim()) newErrors.email = "Please enter Email.";
-    if (!formData.mobile.trim())
-      newErrors.mobile = "Please enter Mobile number.";
-    if (!formData.subject.trim()) newErrors.subject = "Please enter Subject.";
-    if (!formData.message.trim()) newErrors.message = "Please enter Message.";
-    if (formData.message.length > 250)
-      newErrors.message = "Message cannot exceed 250 characters.";
+  if (!formData.name.trim()) newErrors.name = "Please enter Name.";
+  if (!formData.email.trim()) newErrors.email = "Please enter Email.";
+  if (!formData.mobile.trim())
+    newErrors.mobile = "Please enter Mobile number.";
+  if (!formData.subject.trim()) newErrors.subject = "Please enter Subject.";
+  if (!formData.message.trim()) newErrors.message = "Please enter Message.";
+  if (formData.message.length > 250)
+    newErrors.message = "Message cannot exceed 250 characters.";
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (formData.email && !emailPattern.test(formData.email))
-      newErrors.email = "Enter a valid email address.";
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (formData.email && !emailPattern.test(formData.email))
+    newErrors.email = "Enter a valid email address.";
 
-    const mobilePattern = /^[0-9]{10}$/;
-    if (formData.mobile && !mobilePattern.test(formData.mobile))
-      newErrors.mobile = "Mobile number must be 10 digits.";
+  const mobilePattern = /^[0-9]{10}$/;
+  if (formData.mobile && !mobilePattern.test(formData.mobile))
+    newErrors.mobile = "Mobile number must be 10 digits.";
 
-    setErrors(newErrors);
+  setErrors(newErrors);
+  if (Object.keys(newErrors).length > 0) return;
 
-    if (Object.keys(newErrors).length > 0) return;
+  try {
+    // ✅ SEND DATA TO GOOGLE SHEET
+    await fetch(GOOGLE_WEB_APP_URL, {
+      method: "POST",
+      mode: "no-cors", // IMPORTANT
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    console.log("Form data sent to Google Sheets.");
 
+    // ✅ SUCCESS UI
     setSuccessMessage("Thank you! Your message has been sent successfully.");
 
     setFormData({
@@ -119,7 +135,12 @@ const Contact_us = () => {
     });
 
     setTimeout(() => setSuccessMessage(""), 3000);
-  };
+
+  } catch (error) {
+    console.error("Form submit error:", error);
+    alert("Something went wrong. Please try again.");
+  }
+};
 
   return (
     <section className="contact-section" data-aos="fade-up">
