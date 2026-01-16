@@ -29,6 +29,9 @@ const Contact_us = () => {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -86,61 +89,67 @@ const Contact_us = () => {
     });
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const newErrors = {};
+    const newErrors = {};
 
-  if (!formData.name.trim()) newErrors.name = "Please enter Name.";
-  if (!formData.email.trim()) newErrors.email = "Please enter Email.";
-  if (!formData.mobile.trim())
-    newErrors.mobile = "Please enter Mobile number.";
-  if (!formData.subject.trim()) newErrors.subject = "Please enter Subject.";
-  if (!formData.message.trim()) newErrors.message = "Please enter Message.";
-  if (formData.message.length > 250)
-    newErrors.message = "Message cannot exceed 250 characters.";
+    if (!formData.name.trim()) newErrors.name = "Please enter Name.";
+    if (!formData.email.trim()) newErrors.email = "Please enter Email.";
+    if (!formData.mobile.trim())
+      newErrors.mobile = "Please enter Mobile number.";
+    if (!formData.subject.trim()) newErrors.subject = "Please enter Subject.";
+    if (!formData.message.trim()) newErrors.message = "Please enter Message.";
+    if (formData.message.length > 250)
+      newErrors.message = "Message cannot exceed 250 characters.";
 
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (formData.email && !emailPattern.test(formData.email))
-    newErrors.email = "Enter a valid email address.";
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (formData.email && !emailPattern.test(formData.email))
+      newErrors.email = "Enter a valid email address.";
 
-  const mobilePattern = /^[0-9]{10}$/;
-  if (formData.mobile && !mobilePattern.test(formData.mobile))
-    newErrors.mobile = "Mobile number must be 10 digits.";
+    const mobilePattern = /^[0-9]{10}$/;
+    if (formData.mobile && !mobilePattern.test(formData.mobile))
+      newErrors.mobile = "Mobile number must be 10 digits.";
 
-  setErrors(newErrors);
-  if (Object.keys(newErrors).length > 0) return;
+    setErrors(newErrors);
+    if (Object.keys(newErrors).length > 0) return;
 
-  try {
-    // ✅ SEND DATA TO GOOGLE SHEET
-    await fetch(GOOGLE_WEB_APP_URL, {
-      method: "POST",
-      mode: "no-cors", // IMPORTANT
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-    console.log("Form data sent to Google Sheets.");
+    try {
 
-    // ✅ SUCCESS UI
-    setSuccessMessage("Thank you! Your message has been sent successfully.");
+      setLoading(true); // ✅ START LOADER
 
-    setFormData({
-      name: "",
-      email: "",
-      mobile: "",
-      subject: "",
-      message: "",
-    });
 
-    setTimeout(() => setSuccessMessage(""), 3000);
+      // ✅ SEND DATA TO GOOGLE SHEET
+      await fetch(GOOGLE_WEB_APP_URL, {
+        method: "POST",
+        mode: "no-cors", // IMPORTANT
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      console.log("Form data sent to Google Sheets.");
 
-  } catch (error) {
-    console.error("Form submit error:", error);
-    alert("Something went wrong. Please try again.");
-  }
-};
+      // ✅ SUCCESS UI
+      setSuccessMessage("Thank you! Your message has been sent successfully.");
+
+      setFormData({
+        name: "",
+        email: "",
+        mobile: "",
+        subject: "",
+        message: "",
+      });
+
+      setTimeout(() => setSuccessMessage(""), 3000);
+
+    } catch (error) {
+      console.error("Form submit error:", error);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false); // ✅ STOP LOADER
+    }
+  };
 
   return (
     <section className="contact-section" data-aos="fade-up">
@@ -221,9 +230,10 @@ const handleSubmit = async (e) => {
                   <p className="error-message">{errors.message}</p>
                 )}
 
-                <button type="submit" className="submit-btn">
-                  Submit
+                <button type="submit" className="submit-btn" disabled={loading}>
+                  {loading ? <span className="btn-loader"></span> : "Submit"}
                 </button>
+
 
                 {successMessage && (
                   <p className="success-message">{successMessage}</p>
