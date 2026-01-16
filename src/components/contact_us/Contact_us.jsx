@@ -7,10 +7,10 @@ import linkedinIcon from "../../assets/icons/icons/Group.png";
 import whatsappIcon from "../../assets/icons/icons/logos_whatsapp-icon.png";
 import mailIcon from "../../assets/icons/icons/mail.png";
 
-const GOOGLE_WEB_APP_URL =
-  "https://script.google.com/macros/s/AKfycbxeNENB-ksqEXkTbmXyKO7xos-_H1rz0rVat_Oo7n_8sOYXTYbT4qMSxQpHh2CT-f_CJA/exec";
+// const GOOGLE_WEB_APP_URL =
+//   "https://script.google.com/macros/s/AKfycbxeNENB-ksqEXkTbmXyKO7xos-_H1rz0rVat_Oo7n_8sOYXTYbT4qMSxQpHh2CT-f_CJA/exec";
 
-
+const GOOGLE_WEB_APP_URL ="https://script.google.com/macros/s/AKfycbx-cpokxvNppaa7AD8xMEAy48KZf6rUl0L7wG1edWP8iq6LPnv0Uv97GJ1944SfMqoK/exec"
 const Contact_us = () => {
   const [formData, setFormData] = useState({
     name: "",
