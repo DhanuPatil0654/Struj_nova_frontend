@@ -4,6 +4,19 @@ import { FaShoppingCart } from "react-icons/fa";
 import charger350 from '../../assets/service/service1/Smart & Scalable Complete EV Charging infrastructure2.png'
 import ProductTwo from "./ProductTwo";
 
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+
+import charger1 from "../../assets/service/service1/Smart & Scalable Complete EV Charging infrastructure2.png";
+import charger2 from "../../assets/service/service1/Smart & Scalable Complete EV Charging infrastructure2.png";
+import charger3 from "../../assets/service/service1/Smart & Scalable Complete EV Charging infrastructure2.png";
+
 function ProductCom_charger() {
     // 350 kW Charger Specifications
     const chargerSpecs = {
@@ -84,8 +97,30 @@ function ProductCom_charger() {
 
                                 {/* Right: Product Image */}
                                 <div className="product-image">
-                                    <img src={charger350} alt="Charger"  />
+                                    <Swiper
+                                        modules={[Pagination, Autoplay]}
+                                        slidesPerView={1}
+                                        spaceBetween={10}
+                                        autoplay={{ delay: 2500, disableOnInteraction: false }}
+                                        pagination={{ clickable: true }}
+                                        loop={true}
+                                    >
+                                        <SwiperSlide className="image-slide">
+                                            <img src={charger1} alt="Charger 1" />
+                                        </SwiperSlide>
+
+                                        <SwiperSlide className="image-slide">
+                                            <img src={charger2} alt="Charger 2" />
+                                        </SwiperSlide>
+
+                                        <SwiperSlide className="image-slide">
+                                            <img src={charger3} alt="Charger 3" />
+                                        </SwiperSlide>
+                                    </Swiper>
                                 </div>
+
+
+
                             </div>
 
 
@@ -171,11 +206,11 @@ function ProductCom_charger() {
                         </div>
                     </div>
                 </div>
-            
+
             </div>
 
 
-            <ProductTwo/>
+            <ProductTwo />
         </>
     );
 }

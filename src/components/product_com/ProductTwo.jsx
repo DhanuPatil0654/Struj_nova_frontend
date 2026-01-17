@@ -1,7 +1,17 @@
 import React from "react";
 import "../../css/serviceinfo_card/serviceinfo.css";
 import { FaShoppingCart } from "react-icons/fa";
-import charger22 from '../../assets/service/service1/srviceimg2.png'
+import charger22 from '../../assets/AC Modified/ChatGPT Image Jan 13, 2026, 10_44_42 PM.png'
+import charger_imgs from '../../assets/AC Modified/WhatsApp Image 2025-12-29 at 11.15.05 PM.jpeg'
+import charger_img1 from '../../assets/AC Modified/WhatsApp Image 2025-12-29 at 11.13.43 PM.jpeg'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+
 
 function ProductTwo() {
 
@@ -19,11 +29,8 @@ function ProductTwo() {
 
     return (
         <>
-
-
             <div className="container charger-container">
                 <div className="row">
-
                     <div className="charger-card m-2">
                         <div className="card-body">
                             {/* Header Section */}
@@ -72,8 +79,27 @@ function ProductTwo() {
                                 </div>
 
                                 {/* Right: Product Image */}
-                                <div className="product-image-two">
-                                    <img src={charger22} alt="Two-Wheeler Charger" />
+                                <div className="product-image">
+                                    <Swiper
+                                        modules={[Pagination, Autoplay]}
+                                        slidesPerView={1}
+                                        spaceBetween={10}
+                                        autoplay={{ delay: 2500, disableOnInteraction: false }}
+                                        pagination={{ clickable: true }}
+                                        loop={true}
+                                    >
+                                        <SwiperSlide className="image-slide">
+                                            <img src={charger22} alt="Charger 1" />
+                                        </SwiperSlide>
+
+                                        <SwiperSlide className="image-slide">
+                                            <img src={charger_imgs} alt="Charger 2" />
+                                        </SwiperSlide>
+
+                                        <SwiperSlide className="image-slide">
+                                            <img src={charger_img1} alt="Charger 3" />
+                                        </SwiperSlide>
+                                    </Swiper>
                                 </div>
                             </div>
 

@@ -262,6 +262,122 @@
     cursor: pointer;
 }
 
+
+.gradient-text {
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #00170e, #1f7e59);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Container */
+.product-image {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+ 
+}
+
+/* Swiper height responsive */
+.product-image .swiper {
+  width: 100%;
+  height: 330px !important;
+  padding-bottom: 35px;
+}
+
+/* Position pagination at bottom */
+.product-image .swiper-pagination {
+  bottom: 0px !important;
+}
+
+/* Optional: style dots */
+.product-image .swiper-pagination-bullet {
+  background: #1f7e59;
+  opacity: 0.4;
+}
+
+.product-image .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Center image in slide */
+.image-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image scaling */
+.image-slide img {
+  width: 100%;
+  height: 90%;
+  max-width: 380px;
+  object-fit: contain;
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 576px) {
+  .product-image {
+    max-width: 100%;
+  }
+
+  .product-image .swiper {
+    height: 220px;
+  }
+
+  .image-slide img {
+    max-width: 280px;
+  }
+}
+
+/* ---------------- TABLET ---------------- */
+@media (min-width: 577px) and (max-width: 992px) {
+  .product-image .swiper {
+    height: 260px;
+  }
+
+  .image-slide img {
+    max-width: 340px;
+  }
+}
+
+/* ---------------- DESKTOP ---------------- */
+@media (min-width: 993px) {
+  .product-image .swiper {
+    height: 320px;
+  }
+
+  .image-slide img {
+    max-width: 380px;
+  }
+}
+
+
+
+
+/* .gradient-text {
+  font-size: 48px;
+  font-weight: 800;
+  background: linear-gradient(
+    135deg,
+    #88E972 0%,
+    #6AB0D5 50%,
+    #4278D1 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (max-width: 768px) {
+  .gradient-text {
+    font-size: 32px;
+  }
+} */
+
+
 .session-history-btn:hover {
     color: #6d28d9;
 }
