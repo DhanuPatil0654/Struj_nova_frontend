@@ -5,6 +5,11 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { FiSearch, FiShoppingCart, FiMenu, FiX } from 'react-icons/fi';
 import logo from '../../assets/logo/StrujNova_LOGO.png'
 import { Link } from 'react-router';
+
+import { MdEmail } from "react-icons/md";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
+
 function NavbarHeader() {
     const [cartCount] = useState(0);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -75,12 +80,12 @@ function NavbarHeader() {
                             </a>
                         </li>
                     </ul>
-                    <div className="nav-icons">
+                    {/* <div className="nav-icons">
                         <button className="icon-btn cart-btn" aria-label="Shopping Cart">
                             <FiShoppingCart />
                             {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
                         </button>
-                    </div>
+                    </div> */}
 
                     {/* Right Side Icons */}
                     {/* <div className="nav-icons">
@@ -147,16 +152,16 @@ function NavbarHeader() {
 
                 <div className="sidebar-footer">
                     <div className="sidebar-icons">
-                        <a href="#facebook" className="sidebar-social-icon">
+                        <a href="https://www.facebook.com/share/1G6w28Zra8/" className="sidebar-social-icon">
                             <FaFacebookF />
                         </a>
-                        <a href="#twitter" className="sidebar-social-icon">
-                            <FaXTwitter />
+                        <a href="https://www.instagram.com/strujnova_energy_official?igsh=MWp2bTVzamtxeGdwNw==" className="sidebar-social-icon">
+                            <FaInstagram />
                         </a>
-                        <a href="#youtube" className="sidebar-social-icon">
-                            <FaYoutube />
+                        <a href="https://wa.me/918275108855" className="sidebar-social-icon">
+                            <FaWhatsapp />
                         </a>
-                        <a href="#linkedin" className="sidebar-social-icon">
+                        <a href="https://www.linkedin.com/in/strujnova-energy-401591388?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="sidebar-social-icon">
                             <FaLinkedinIn />
                         </a>
                     </div>

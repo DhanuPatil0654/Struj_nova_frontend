@@ -17,7 +17,7 @@ function Aboutpage() {
     <>
 
       <div className="about_para">
-        <div className='container-fluid' data-aos="fade-up">
+        {/* <div className='container-fluid' data-aos="fade-up"> */}
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 p-0 m-0">
               <div className="about_content">
@@ -26,13 +26,13 @@ function Aboutpage() {
                   <span className="typing_text"> About Us</span>
                 </p>
 
-                <p>
+                <p className='p-0 m-0'>
                   StrujNova is a next-generation electric mobility and clean-energy company committed to accelerating India’s transition toward a smarter, greener, and fully sustainable future. We design and develop high-performance EV chargers, power electronics, CMS platforms, IoT-driven energy solutions, and renewable-integrated infrastructure that redefine how India charges, moves, and progresses.With deep expertise in R&D, manufacturing, and energy technology, we create scalable solutions for individuals, businesses, fleets, industries, and smart cities — enabling seamless charging, intelligent energy distribution, and long-term operational excellence.
                 </p>
 
-                <button className="read-more-btn mt-4">
+                {/* <button className="read-more-btn mt-4">
                   Read More <FaArrowRight className="read-arrow" />
-                </button>
+                </button> */}
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 p-0 m-0">
@@ -45,7 +45,7 @@ function Aboutpage() {
 
 
         </div>
-      </div>
+      {/* </div> */}
 
       <div className='container mt-5'>
         <p className='para_about'>

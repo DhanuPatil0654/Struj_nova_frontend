@@ -116,7 +116,7 @@ function Features() {
             <div className="technology-container">
                 <h2 className="tech-title">Technology & Innovation</h2>
                 <p className="tech-subtitle">
-                    At Struj Nova, we pioneer EV technologies to make driving smarter, safer, and greener.
+                    At StrujNova, we pioneer EV technologies to make driving smarter, safer, and greener.
                 </p>
                 <div className='container'>
                     <Swiper

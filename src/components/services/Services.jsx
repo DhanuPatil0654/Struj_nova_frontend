@@ -201,7 +201,7 @@ function Services() {
             At our EV service company, we are committed to powering the future with reliable, efficient, and innovative electric mobility solutions.
             From seamless charging infrastructure to expert maintenance and support, we ensure every electric vehicle runs at its best.
             With a focus on sustainability and next-generation technology, we strive to make clean energy accessible for all.
-            <span className="highlight"> Charging Tomorrow Today !!!  </span> — driving a greener world, one charge at a time.
+            <span className="highlight"> Charging Tomorrow, Today !!!  </span> — driving a greener world, one charge at a time.
           </h2>
         </div>
 

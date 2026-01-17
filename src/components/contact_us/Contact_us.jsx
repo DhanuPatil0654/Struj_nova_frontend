@@ -328,7 +328,7 @@ const Contact_us = () => {
                   <h5>Contact</h5>
                   <p className="mb-0">
                     <a href="tel:+918275108855" className="phone-link">
-                      +91 8275108855
+                      (+91) 8275108855
                     </a>
                   </p>
                   {/* <p className="mb-0">

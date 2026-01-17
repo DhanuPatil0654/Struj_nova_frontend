@@ -55,7 +55,7 @@ function Homepage() {
             <div className="col-lg-5 col-md-12 text-lg-start text-center mb-4 mb-lg-0 d-flex">
               <div className="text-bg-box align-self-center">
                 <h1 className="head_text">STRUJNOVA ENERGY</h1>
-                <p className="tagline">Charging Tomorrow, Today!</p>
+                <p className="tagline">Charging Tomorrow, Today !!!</p>
                 <p className="ev-para">
                   StrujNova Energy is driving the electric future with smart EV charging
                   solutions, advanced power systems, and sustainable energy innovation.

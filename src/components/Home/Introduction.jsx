@@ -20,7 +20,7 @@ function Introduction() {
                         <div class="card card-about mt-3">
                             <div class="card-body">
                                 <p className='about_company_intro '>
-                                    At Struj Nova, we are committed to pushing the boundaries of electric vehicle technology and expanding the adoption of EVs worldwide, contributing to a cleaner, smarter, and more sustainable future
+                                    At StrujNova, we are committed to pushing the boundaries of electric vehicle technology and expanding the adoption of EVs worldwide, contributing to a cleaner, smarter, and more sustainable future
                                 </p>
                             </div>
                         </div>
