@@ -65,6 +65,29 @@
     color: black !important;
 } */
 
+.email-link {
+  color: inherit;        /* keeps your text color */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+  color: #1f7e59;        /* your brand color */
+}
+
+
+.phone-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.phone-link:hover {
+  color: #1f7e59;
+  text-decoration: underline;
+}
+
 /* RIGHT INFO SECTION */
 .contact-info {
     padding-left: 40px;

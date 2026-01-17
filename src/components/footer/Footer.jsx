@@ -6,6 +6,7 @@ import logo from '../../assets/footer/loading_im.png'
 import left_img from '../../assets/footer/footer_img3.png'
 import right_img from '../../assets/footer/footer_img1.png'
 import { Link } from 'react-router-dom';
+import footerimag from '../../assets/footer/footer_imgg1.png'
 function Footer() {
     return (
         <>
@@ -14,14 +15,24 @@ function Footer() {
                     <div class="row align-items-start footer-top">
 
                         {/* LEFT – LOGO */}
-                        <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                            <img src={logo} class="footer_logo" alt="logo" />
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <img src={footerimag} class="footer_logo" alt="logo" />
                             {/* <p class="company-name">StrujNova Energy</p> */}
+                            {/* <p class="quick_link">
+                                <span class="highlight-who">Who</span> We Are
+                            </p>
+
+                            <p className='contact-item'>
+                                StrujNova Energy provides smart EV charging and energy solutions focused on reliability, efficiency, and sustainability.
+                            </p> */}
                         </div>
 
                         {/* MIDDLE – QUICK LINKS */}
                         <div class="col-lg-4 col-md-4 col-sm-12 quick-links-container">
-                            <p class="quick_link">QUICK LINKS</p>
+                            <p class="quick_link">
+                                <span class="highlight-who">Quick</span> Links
+                            </p>
+
 
                             <div class="row">
                                 <div class="col-6">
@@ -40,7 +51,7 @@ function Footer() {
                                         <li>Blogs</li>
                                         <li>News</li>
                                         <li>Careers</li>
-                                        <li>Contact Us</li>
+                                        <Link to='/contact-us' className="nav-link-footer" onClick={() => window.scrollTo(0, 0)}><li>Contact Us</li></Link>
                                     </ul>
                                 </div>
                             </div>
@@ -49,11 +60,14 @@ function Footer() {
 
                         {/* RIGHT – CONTACT */}
                         <div class="col-lg-4 col-md-4 col-sm-12 contact-box">
-                            <p class="quick_link">CONTACT US</p>
+                            <p class="quick_link">
+                                <span class="highlight-who">Let’s</span> Power-up Our Conversation
+                            </p>
+
 
                             <p class="contact-item">
                                 <i class="fa-solid fa-phone contact-icon"></i>
-                                +91-8275108855 <span></span>
+                                (+91) 8275108855 <span></span>
                             </p>
 
                             <p class="contact-item">
@@ -63,7 +77,10 @@ function Footer() {
 
                             <p class="contact-item">
                                 <FaLocationDot class="react-icon" />
-                                Karvenagar, Pune-52
+                                {/* Karvenagar, Pune-52 */}
+                                Karvenagar, Pune-52 (411052), Maharashtra, India
+
+
                             </p>
                         </div>
                     </div>

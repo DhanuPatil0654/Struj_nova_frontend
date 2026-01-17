@@ -10,7 +10,7 @@ import mailIcon from "../../assets/icons/icons/mail.png";
 // const GOOGLE_WEB_APP_URL =
 //   "https://script.google.com/macros/s/AKfycbxeNENB-ksqEXkTbmXyKO7xos-_H1rz0rVat_Oo7n_8sOYXTYbT4qMSxQpHh2CT-f_CJA/exec";
 
-const GOOGLE_WEB_APP_URL ="https://script.google.com/macros/s/AKfycbx-cpokxvNppaa7AD8xMEAy48KZf6rUl0L7wG1edWP8iq6LPnv0Uv97GJ1944SfMqoK/exec"
+const GOOGLE_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbx-cpokxvNppaa7AD8xMEAy48KZf6rUl0L7wG1edWP8iq6LPnv0Uv97GJ1944SfMqoK/exec"
 const Contact_us = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -251,7 +251,7 @@ const Contact_us = () => {
                 <br /> Here.
               </h3>
               <p>
-                Struj Nova is a fast-growing EV tech startup focused on building reliable, future-ready solutions in electric mobility.
+                StrujNova is a fast-growing EV tech startup focused on building reliable, future-ready solutions in electric mobility.
                 From intelligent power systems to advanced battery technology and smart charging infrastructure, we innovate to make clean mobility accessible for everyone.
                 <br />
                 Have questions about our EV products or services?
@@ -269,57 +269,75 @@ const Contact_us = () => {
 
                 <div className="info-block mb-3">
                   <h5>Email</h5>
-                  <p className="mb-0">info.strujnova@gmail.com</p>
+                  <p className="mb-0">
+                    <a
+                      href="mailto:info.strujnova@gmail.com"
+                      className="email-link"
+                    >
+                      info.strujnova@gmail.com
+                    </a>
+                  </p>
                 </div>
+
               </div>
 
               <div className="info-row d-flex flex-wrap justify-content-between align-items-start">
                 <div className="info-block">
                   <h5>Social Network</h5>
                   <div className="social-icons d-flex gap-2 flex-wrap">
-                    <a href="https://facebook.com" target="_blank">
+                    <a href="https://www.facebook.com/share/1G6w28Zra8/" target="_blank">
                       <img
                         src={facebookIcon}
                         alt="Facebook"
                         className="social-icon-img"
                       />
                     </a>
-                    <a href="https://instagram.com" target="_blank">
+                    <a href="https://www.instagram.com/strujnova_energy_official?igsh=MWp2bTVzamtxeGdwNw==" target="_blank">
                       <img
                         src={instaIcon}
                         alt="Instagram"
                         className="social-icon-img"
                       />
                     </a>
-                    <a href="https://linkedin.com" target="_blank">
+                    <a href="https://www.linkedin.com/in/strujnova-energy-401591388?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
                       <img
                         src={linkedinIcon}
                         alt="LinkedIn"
                         className="social-icon-img"
                       />
                     </a>
-                    <a href="https://wa.me/918564000000" target="_blank">
+                    <a href="https://wa.me/918275108855" target="_blank">
                       <img
                         src={whatsappIcon}
                         alt="WhatsApp"
                         className="social-icon-img"
                       />
                     </a>
-                    <a href="mailto:info@wellproducts.co.in" target="_blank">
+                    <a href="mailto:info.strujnova@gmail.com">
                       <img
                         src={mailIcon}
                         alt="Mail"
                         className="social-icon-img"
                       />
                     </a>
+
                   </div>
                 </div>
 
                 <div className="info-block">
                   <h5>Contact</h5>
-                  <p className="mb-0">+91 8275108855</p>
-                  {/* <p className="mb-0">+91 92840 - 20090</p> */}
+                  <p className="mb-0">
+                    <a href="tel:+918275108855" className="phone-link">
+                      +91 8275108855
+                    </a>
+                  </p>
+                  {/* <p className="mb-0">
+    <a href="tel:+919284020090" className="phone-link">
+      +91 92840 20090
+    </a>
+  </p> */}
                 </div>
+
               </div>
             </div>
           </div>

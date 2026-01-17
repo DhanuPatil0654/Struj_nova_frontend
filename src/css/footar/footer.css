@@ -26,10 +26,23 @@
 
 /* LOGO */
 .footer_logo {
-    width: 180px;
+    width: 80%;       /* makes it full width of its container */
+    height: auto;      /* maintains aspect ratio */
     display: block;
-    margin: 0 auto 10px;
+    margin: 0 auto;
+    object-fit: contain;
+    max-width: 100%;   /* ensures it never overflows container */
 }
+
+/* Optional: if you want some padding on small screens */
+@media (max-width: 768px) {
+    .footer_logo {
+        padding: 0 10px;   /* small horizontal padding for tiny screens */
+        width: 100% !important;
+    }
+}
+
+
 
 .company-name {
     font-size: 14px;
@@ -51,6 +64,7 @@
     padding: 0;
     margin: 0;
 }
+
 
 .quick-list li {
     font-size: 16px;
@@ -74,7 +88,7 @@
     gap: 12px;
     font-size: 16px;
     margin-bottom: 12px;
-    
+    margin-top: 20px;
 }
 
 /* Bottom Line */
@@ -84,6 +98,9 @@
     width: 100%;
 }
 
+.highlight-who {
+  color: #07d385; /* EV green – change as needed */
+}
 /* SOCIAL + COPYRIGHT */
 .footer-social {
     display: flex;
@@ -141,8 +158,8 @@
     /* Center logo */
     .col-lg-4 img {
         display: block;
-        margin: 0 auto 20px;
-        max-width: 160px;
+        margin: 0 auto 0px;
+        max-width:500px !important;
     }
 
     /* Quick links in 1 column for mobile */
@@ -170,9 +187,25 @@
 .nav-link-footer {
   color: white;
   text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease !important;
 }
 
 .nav-link-footer:hover {
   color: white;        /* keeps text white on hover */
+  text-decoration: none;
+  transform: translateY(-10px) !important;
+}
+
+
+.plain-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.plain-link:hover,
+.plain-link:focus,
+.plain-link:active {
+  color: inherit;
   text-decoration: none;
 }
