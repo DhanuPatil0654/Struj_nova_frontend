@@ -218,7 +218,7 @@ body, html {
 
   60% {
     transform: scale(1.08) translateY(-6px);
-    opacity: 1;
+    opacity: 1 ; 
   }
 
   100% {
