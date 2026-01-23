@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/blogs/Blogdetail.css';
+import '../../css/blogs/blogdetail.css';
 import { FaChargingStation } from "react-icons/fa6";
 import { RiChargingPile2Fill } from "react-icons/ri";
 import { FaCarAlt } from "react-icons/fa";
