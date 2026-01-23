@@ -13,6 +13,7 @@ import { GiBatteryPackAlt } from 'react-icons/gi';
 import { FaJetFighterUp } from "react-icons/fa6";
 import { FaCarSide } from "react-icons/fa";
 import { MdOutlineTwoWheeler } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 function Blogdetail() {
 
@@ -37,7 +38,7 @@ function Blogdetail() {
             title: "Plug-in Hybrid Electric Vehicles (PHEVs)",
             icon: <FaJetFighterUp class="custom-icon" />,
             // para: "Complete hardware + software + operations ecosystem Our services cover public, commercial, and residential charging setups, fleet charging infrastructure, and complete installation & commissioning.",
-             points: [
+            points: [
                 "Use both battery and fuel",
                 "Can be charged externally",
                 "Switch to fuel if battery runs out",
@@ -48,7 +49,7 @@ function Blogdetail() {
             title: "Hybrid Electric Vehicles (HEVs)",
             icon: <FaCarSide class="custom-icon" />,
             // para: "Complete hardware + software + operations ecosystem Our services cover public, commercial, and residential charging setups, fleet charging infrastructure, and complete installation & commissioning.",
-             points: [
+            points: [
                 "Use fuel + small electric motor",
                 "Battery charges automatically (no plug)",
                 "Better mileage than regular vehicles",
@@ -59,7 +60,7 @@ function Blogdetail() {
             title: "Electric Two-Wheelers & Three-Wheelers",
             icon: <MdOutlineTwoWheeler class="custom-icon" />,
             // para: "Complete hardware + software + operations ecosystem Our services cover public, commercial, and residential charging setups, fleet charging infrastructure, and complete installation & commissioning.",
-             points: [
+            points: [
                 "Widely adopted in India",
                 "Ideal for daily commuting and last-mile delivery",
                 "Lower cost and faster adoption",
@@ -120,7 +121,7 @@ function Blogdetail() {
 
                         <div>
                             <p>
-                               Electric Vehicles (EVs) are revolutionizing the way we move, offering a smarter, cleaner alternative to traditional petrol and diesel vehicles. By running on rechargeable batteries and electric motors, EVs provide a quieter ride, lower emissions, and significant energy savings. But the true potential of EVs comes alive only when paired with reliable charging infrastructure.                            </p>
+                                Electric Vehicles (EVs) are revolutionizing the way we move, offering a smarter, cleaner alternative to traditional petrol and diesel vehicles. By running on rechargeable batteries and electric motors, EVs provide a quieter ride, lower emissions, and significant energy savings. But the true potential of EVs comes alive only when paired with reliable charging infrastructure.                            </p>
                             <div className="container why-charge-wrapper">
                                 <div className="row align-items-stretch justify-content-center">
 
@@ -244,6 +245,16 @@ function Blogdetail() {
                                 </div>
                             ))}
                         </div>
+                        <div className="read-more-wrapper">
+                            <Link
+                                to="/contact-us"
+                                
+                                onClick={() => window.scrollTo(0, 0)}
+                            >
+                                <p className="read-more">Contact for More Info →</p>
+                            </Link>
+                        </div>
+
 
                     </div>
 

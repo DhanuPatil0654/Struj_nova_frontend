@@ -337,3 +337,8 @@
   background-clip: text;
   color: transparent;
 }
+
+.read-more-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
