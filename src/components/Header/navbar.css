@@ -385,3 +385,15 @@ ul {
   margin: 0 auto;
   font-weight: 500 !important;
 }
+
+/* Desktop menu active tab */
+.nav-item.active .nav-link {
+    color: green;
+    font-weight: bold;
+}
+
+/* Sidebar menu active tab */
+.sidebar-item.active .sidebar-link {
+    color: green;
+    font-weight: bold;
+}

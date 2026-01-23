@@ -13,6 +13,9 @@ import './App.css'
 import loadingimg from './assets/loading/loading_im.png'
 import Serviceinfo from './components/serviceinfo/Serviceinfo';
 import ProductCom_charger from './components/product_com/ProductCom_charger';
+import Blogs from './components/Blogs/Blogs';
+
+import Blogdetail from './components/Blog Detail/Blogdetail';
 
 function App() {
   useEffect(() => {
@@ -50,6 +53,8 @@ function App() {
             <Route path='/our-products' element={<ProductCom_charger />}></Route>
             <Route path='/about' element={<Aboutpage />}></Route>
             <Route path='/contact-us' element={<Contact_us />}></Route>
+            <Route path='/blogs' element={<Blogs />}></Route>
+            <Route path='/blogs-details' element={<Blogdetail />}></Route> 
           </Routes>
           <Footer />
 

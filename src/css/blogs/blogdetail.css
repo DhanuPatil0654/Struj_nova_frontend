@@ -1,0 +1,339 @@
+.blogsstratcard {
+  border-bottom: none;
+  border: 1px solid #ddd;
+}
+
+.title_blog {
+  font-weight: bold;
+  /* Makes the text bold */
+  text-align: center;
+  /* optional: center align */
+  font-size: 25px;
+  /* your existing size */
+
+
+  background: linear-gradient(180deg, #00170e, #1f7e59);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.blogsstratcard {
+  position: relative;
+}
+
+.card-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 30px;
+  /* ⬅ increase width here */
+  height: 15px;
+  /* thickness of the mark */
+
+  background: linear-gradient(180deg, #00170e, #1f7e59);
+  /* border-top-left-radius: 6px; */
+  border-bottom-right-radius: 6px;
+}
+
+.ev-timeline {
+  margin-left: 20px;
+}
+
+/* Each item */
+.timeline-item {
+  position: relative;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+/* Vertical line ONLY between items */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 14px;
+  /* starts from dot center */
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #00170e, #1f7e59);
+}
+
+/* Remove line after last dot */
+.timeline-item.last::before {
+  display: none;
+}
+
+/* Gradient outer ring */
+.timeline-dot {
+  position: absolute;
+  left: -2px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #00170e, #1f7e59);
+  padding: 3px;
+  z-index: 2;
+}
+
+/* White inner circle */
+.timeline-dot::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* Wrapper */
+.why-charge-wrapper {
+  padding: 40px 0;
+}
+
+/* List container */
+.why-list {
+  max-width: 514px;
+  width: 100%;
+}
+
+/* List item */
+.why-list li {
+  display: flex;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  align-items: flex-start;
+}
+
+/* Icons */
+.icon {
+  font-size: 20px;
+  color: #07d385;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* Vertical divider */
+.vertical-line {
+  width: 2px;
+  background-color: #0a5c3c;
+  height: 100%;
+  min-height: 140px;
+}
+
+/* Tablet adjustments */
+@media (max-width: 992px) {
+  .why-list {
+    max-width: 100%;
+  }
+
+  .why-list li {
+    font-size: 15px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .why-charge-wrapper {
+    padding: 24px 10px;
+  }
+
+  .why-list li {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .icon {
+    margin-top: 2px;
+  }
+}
+
+.ev-card {
+  background-color: hsl(0, 8%, 97%);
+  /* Card background */
+  border-radius: 30px;
+  /* Rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  /* Soft shadow */
+  padding: 20px;
+  /* Inner spacing */
+  margin-bottom: 20px;
+  /* Space between cards */
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Smooth hover effect */
+}
+
+.ev-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.ev-card b {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.ev-card span {
+  display: block;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Optional: Hover effect */
+.ev-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.evtypes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: 'Arial', sans-serif;
+  color: #222;
+}
+
+.evtypes-heading {
+  font-size: 2rem;
+  color: #07d385;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.evtypes-intro {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Grid layout for cards */
+.evtypes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Individual card styling */
+.evtype-card {
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.evtype-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.evtype-card h3 {
+  font-size: 1.3rem;
+  color: #07d385;
+  margin-bottom: 15px;
+}
+
+.evtype-card ul {
+  list-style: disc inside;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.evtype-card li {
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.evtype-card .examples {
+  font-style: italic;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .evtypes-container {
+    padding: 20px 10px;
+  }
+
+  .evtypes-heading {
+    font-size: 1.6rem;
+  }
+
+  .evtype-card {
+    padding: 20px;
+  }
+}
+
+
+.service-card {
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #07d385;
+  text-align: center;
+}
+
+.service-title {
+  color: #0b3b2d;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.service-points {
+  list-style: disc inside;
+  padding-left: 0;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.service-points li {
+  margin-bottom: 8px;
+}
+.demo{
+  font-size: 20px;
+}
+
+.service-para {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.title_blog1 {
+
+  font-weight: bold;
+  /* Makes the text bold */
+  text-align: center;
+  /* optional: center align */
+  font-size: 20px;
+
+
+  background: linear-gradient(180deg, #00170e, #1f7e59);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

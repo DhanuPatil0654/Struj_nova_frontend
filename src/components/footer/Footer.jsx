@@ -48,7 +48,7 @@ function Footer() {
 
                                 <div class="col-6">
                                     <ul class="quick-list">
-                                        <li>Blogs</li>
+                                        <Link to='/blogs' className="nav-link-footer" onClick={() => window.scrollTo(0, 0)}><li>Blogs</li></Link>
                                         <li>News</li>
                                         <li>Careers</li>
                                         <Link to='/contact-us' className="nav-link-footer" onClick={() => window.scrollTo(0, 0)}><li>Contact Us</li></Link>
