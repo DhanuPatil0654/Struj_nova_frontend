@@ -157,7 +157,7 @@ function Services() {
   const handleLearnMore = (card) => {
     setSelected(card);
     setOpen(true);
-   
+
   };
 
 
@@ -170,7 +170,7 @@ function Services() {
             <div className="col-lg-6 col-md-6 col-sm-12 text-section">
               <p className="service-subtitle">Our Service</p>
               <p className="service-main-title">
-                We provide reliable and innovative solutions for electric vehicle owners and businesses. From charging infrastructure installation to maintenance and support, our team ensures your EV operations run smoothly and efficiently.
+                We deliver reliable, end-to-end solutions for electric vehicle owners, enterprises, and fleet operators. Our offerings span EV charging infrastructure planning, installation, commissioning, and ongoing maintenance—backed by smart monitoring, proactive support, and performance optimization. With a focus on safety, scalability, and uptime, we ensure your EV operations remain efficient, future-ready, and hassle-free.
               </p>
               <hr className="service-divider d-md-block d-none" />
             </div>
@@ -267,12 +267,19 @@ function Services() {
             <button className="popup-close" onClick={() => setOpen(false)}>✕</button>
 
             <h3 className="popup-title">{selected.title}</h3>
-
-            <ul className="popup-list">
+            <p className="popup-desc text-center">
+              {selected.para}
+            </p>
+            <div className="ev-timeline">
               {selected.points?.map((p, i) => (
-                <li key={i}><b>{p}</b></li>
+                <div className="timeline-item" key={i}>
+                  <span className="timeline-dot"></span>
+                  <p className="text-justify">{p}</p>
+                </div>
               ))}
-            </ul>
+            </div>
+
+
 
           </div>
         </div>

@@ -31,7 +31,9 @@
   font-size: 20px;
   font-weight: 700;
   color: #222;
-  margin-top: 10px;
+   margin-top: 15px;
+  margin-bottom: 12px;
+
 }
 
 /* Paragraph */
@@ -40,12 +42,13 @@
   color: #444;
   margin-top: 10px;
   line-height: 1.6;
+  
 }
 
 /* Responsive */
 @media (max-width: 576px) {
   .vission_card {
-    padding: 30px 20px;
+    padding: 45px 15px;
   }
 
   .icon_circle {

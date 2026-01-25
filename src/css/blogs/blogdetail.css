@@ -46,7 +46,7 @@
 .timeline-item {
   position: relative;
   padding-left: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 13px;
 }
 
 /* Vertical line ONLY between items */
