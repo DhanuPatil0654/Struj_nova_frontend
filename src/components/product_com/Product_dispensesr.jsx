@@ -15,7 +15,7 @@ import "swiper/css/pagination";
 import { MdOutlinePhoneCallback } from "react-icons/md";
 import { GiWorld } from "react-icons/gi";
 
-import charger1 from "../../assets/products/product_DC/product120kw.png";
+import charger1 from "../../assets/products/product_DC/productDisender.png";
 import charger2 from "../../assets/service/service1/Smart & Scalable Complete EV Charging infrastructure2.png";
 import charger3 from "../../assets/service/service1/Smart & Scalable Complete EV Charging infrastructure2.png";
 

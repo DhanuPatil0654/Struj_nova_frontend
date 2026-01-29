@@ -6,6 +6,7 @@ import charger1 from "../../assets/products/product_DC/product30kw.png";
 import charger2 from "../../assets/products/product_DC/product60kw.png";
 import charger3 from "../../assets/products/product_DC/product120kw.png";
 import charger4 from "../../assets/products/product_DC/product180kwand240kw.png";
+import charger5 from "../../assets/products/product_DC/productDisender.png";
 
 const productData = [
     {
@@ -37,12 +38,14 @@ const productData = [
         endpoitns: "/our-products-charger-DC_180_and_240",
     },
     {
-        img: charger4,
+        img: charger5,
         category: "EV Charger",
         title: "DC Dispenser Charging System",
-        desc: "Ultra-high-power DC fast charging for highways and high-demand EV hubs with smart OCPP connectivity.",
+        desc: "High-power DC dispenser for fast, multi-vehicle EV charging with smart OCPP connectivity.",
         endpoitns: "/our-products-charger-dispencer",
     }
+
+
 
 
 
