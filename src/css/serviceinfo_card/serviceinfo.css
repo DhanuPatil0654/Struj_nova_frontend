@@ -590,3 +590,12 @@
 
 
 
+.ev-bullets {
+  padding-left: 20px;
+}
+
+.ev-bullets li {
+    
+  margin-bottom: 10px;
+  text-align: justify;
+}

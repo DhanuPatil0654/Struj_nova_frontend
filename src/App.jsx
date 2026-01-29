@@ -16,6 +16,11 @@ import ProductCom_charger from './components/product_com/ProductCom_charger';
 import Blogs from './components/Blogs/Blogs';
 
 import Blogdetail from './components/Blog Detail/Blogdetail';
+import ProojectHome from './components/product_com/ProojectHome';
+import ProductTwo from './components/product_com/ProductTwo';
+import Product120kw from './components/product_com/Product120kw';
+import Product180_and_240kw from './components/product_com/Product180_and_240kw';
+import ProductDC_dispensesr from './components/product_com/Product_dispensesr';
 
 function App() {
   useEffect(() => {
@@ -50,7 +55,12 @@ function App() {
           <Routes>
             <Route path='/' element={<Homepage />}></Route>
             <Route path='/service' element={<Services />}></Route>
-            <Route path='/our-products' element={<ProductCom_charger />}></Route>
+            <Route path='/our-products' element={<ProojectHome />}></Route>
+            <Route path='/our-products-charger' element={<ProductCom_charger />}></Route>
+            <Route path='/our-products-charger-DC' element={<ProductTwo />}></Route>
+            <Route path='/our-products-charger-DC_120' element={<Product120kw />}></Route>
+            <Route path='/our-products-charger-DC_180_and_240' element={<Product180_and_240kw />}></Route>
+            <Route path='/our-products-charger-dispencer' element={<ProductDC_dispensesr />}></Route>
             <Route path='/about' element={<Aboutpage />}></Route>
             <Route path='/contact-us' element={<Contact_us />}></Route>
             <Route path='/blogs' element={<Blogs />}></Route>
@@ -59,6 +69,7 @@ function App() {
           <Footer />
 
         </BrowserRouter>
+        
      
     </>
   )
