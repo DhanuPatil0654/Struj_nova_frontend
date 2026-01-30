@@ -21,6 +21,8 @@ import ProductTwo from './components/product_com/ProductTwo';
 import Product120kw from './components/product_com/Product120kw';
 import Product180_and_240kw from './components/product_com/Product180_and_240kw';
 import ProductDC_dispensesr from './components/product_com/Product_dispensesr';
+import FetchData from './components/FetchData/FetchData';
+import Blogdetails_digital from './components/Blog Detail/Blogdetails_digital';
 
 function App() {
   useEffect(() => {
@@ -56,6 +58,7 @@ function App() {
             <Route path='/' element={<Homepage />}></Route>
             <Route path='/service' element={<Services />}></Route>
             <Route path='/our-products' element={<ProojectHome />}></Route>
+            <Route path='/fetch' element={<FetchData />}></Route>
             <Route path='/our-products-charger' element={<ProductCom_charger />}></Route>
             <Route path='/our-products-charger-DC' element={<ProductTwo />}></Route>
             <Route path='/our-products-charger-DC_120' element={<Product120kw />}></Route>
@@ -65,6 +68,7 @@ function App() {
             <Route path='/contact-us' element={<Contact_us />}></Route>
             <Route path='/blogs' element={<Blogs />}></Route>
             <Route path='/blogs-details' element={<Blogdetail />}></Route> 
+            <Route path='/blogs-details-digital' element={<Blogdetails_digital />}></Route> 
           </Routes>
           <Footer />
 

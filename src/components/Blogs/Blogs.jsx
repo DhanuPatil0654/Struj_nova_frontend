@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../css/blogs/blogs.css";
 import blog1 from '../../assets/blog/blogposter.png';
 import blog2 from '../../assets/blog/blogimg2.webp';
@@ -13,23 +13,41 @@ const blogData = [
         title: "EV & CHARGING ECOSYSTEM",
         desc: "Electric Vehicles are cleaner and quieter, but their growth depends on strong charging infrastructure.",
     },
-    // {
-    //     img: blog2,
-    //     date: "May 3, 2020",
-    //     category: "Design",
-    //     title: "Make Your Website",
-    //     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim eveniet incidunt ullam repellat",
-    // },
-    // {
-    //     img: blog3,
-    //     date: "May 3, 2020",
-    //     category: "Design",
-    //     title: "Make Your Website",
-    //     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim eveniet incidunt ullam repellat",
-    // },
+
 ];
 
 function Blogs() {
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const sheetId = "1Ha5QXTQeg2c0nyWQ8pkP-2ia-IQwrJSWcxg-V_V38VE";
+        const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json`;
+
+        fetch(url)
+            .then(res => res.text())
+            .then(text => {
+                // Google returns invalid JSON → clean it
+                const json = JSON.parse(
+                    text.substring(47).slice(0, -2)
+                );
+
+                const rows = json.table.rows.map(row => ({
+                    time: row.c[0]?.v || "",
+                    day: row.c[1]?.v || "",
+                    name: row.c[2]?.v || "",
+                    blog_title: row.c[3]?.v || "",
+                    blog_short_paragrap: row.c[4]?.v || "",
+                    img: row.c[5]?.v || "",
+                    endpoint: row.c[6]?.v || "",
+                   
+                }));
+
+                setData(rows);
+                console.log("Sheet JSON Data:", rows);
+            })
+            .catch(err => console.error("Fetch error:", err));
+    }, []);
 
     const getSmartTime = (dateString) => {
         try {
@@ -81,7 +99,7 @@ function Blogs() {
                     StrujNova Energy delivers intelligent EV charging and advanced energy solutions designed for efficiency, reliability, and sustainability. We empower individuals, businesses, and infrastructure partners to accelerate the transition toward cleaner and smarter electric mobility
                 </p>
 
-                <div className="row g-4">
+                {/* <div className="row g-4">
                     {blogData.map((blog, index) => (
                         <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
                             <div className="blog-card">
@@ -106,6 +124,34 @@ function Blogs() {
                             </div>
                         </div>
                     ))}
+                </div> */}
+
+                <div className="row g-4">
+                    {data.length > 1 &&  // check if there is actual data after the first row
+                        data.slice(1).map((blog, index) => (
+                            <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
+                                <div className="blog-card">
+                                    <div className="blog-img-wrapper">
+                                        <img src={blog.img} alt="blog" className="blog-img" />
+                                        <div className="blog-img-overlay"></div>
+                                    </div>
+
+                                    <div className="blog-content">
+                                        <p className="blog-meta">
+                                            <span>🕒 {blog.time} </span>
+                                            | <span>by {blog.name}</span>
+                                        </p>
+
+                                        <h5 className="blog-title">{blog.blog_title}</h5>
+                                        <p className="blog-desc">{blog.blog_short_paragrap}</p>
+
+                                        <Link to={blog.endpoint} className="nav-link-footer" onClick={() => window.scrollTo(0, 0)}><p className="read-more">
+                                            Read More →
+                                        </p></Link>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                 </div>
             </div>
         </section>

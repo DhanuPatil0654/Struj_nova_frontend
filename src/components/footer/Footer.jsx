@@ -66,17 +66,17 @@ function Footer() {
 
 
                             <p class="contact-item">
-                                <i class="fa-solid fa-phone contact-icon"></i>
+                                <i className="fa-solid fa-phone contact-icon"></i>
                                 (+91) 8275108855 <span></span>
                             </p>
 
-                            <p class="contact-item">
-                                <IoMdMail class="react-icon" />
+                            <p className="contact-item">
+                                <IoMdMail className="react-icon" />
                                 info.strujnova@gmail.com
                             </p>
 
-                            <p class="contact-item">
-                                <FaLocationDot class="react-icon" />
+                            <p className="contact-item">
+                                <FaLocationDot className="react-icon" />
                                 {/* Karvenagar, Pune-52 */}
                                 Karvenagar, Pune-52 (411052), Maharashtra, India
 
@@ -86,7 +86,7 @@ function Footer() {
                     </div>
 
                     {/* BOTTOM LINE */}
-                    <div class="footer-line"></div>
+                    <div className="footer-line"></div>
 
                     {/* SOCIAL ICONS */}
                     {/* <div class="footer-social text-center">
